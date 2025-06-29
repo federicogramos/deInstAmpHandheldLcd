@@ -5,3 +5,6 @@ Diseño de un amplificador de instrumentacion dentro de gabinete a batería y co
 Contiene el firmware.
 # ./pcb
 Diseño en Altium.
+![alt text](https://raw.githubusercontent.com/federicogramos/deInstAmpHandheldLcd/main/otherFiles/cad.jpg)
+
+
