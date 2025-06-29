@@ -1,0 +1,87 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[c E3 0 1 2 3 .. ]
+[n E3 e_timer TMR_LCD TMR_1S TMR_BUZZER CANT_TIMERS  ]
+[s S1 `i 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1 . prescaler loop flag pause ]
+[; ;timer_user_settings.h: 12: typedef int type_timerSize;
+[; ;timer_user_settings.h: 13: typedef const type_timerSize type_timerDelayConstant;
+[; ;timer_aliases.h: 12: enum e_timer
+[; ;timer_aliases.h: 13: {
+[; ;timer_aliases.h: 14: TMR_LCD,
+[; ;timer_aliases.h: 15: TMR_1S,
+[; ;timer_aliases.h: 16: TMR_BUZZER,
+[; ;timer_aliases.h: 17: CANT_TIMERS};
+[; ;timer_lib.h: 19: typedef struct
+[; ;timer_lib.h: 20: {
+[; ;timer_lib.h: 21: type_timerSize prescaler;
+[; ;timer_lib.h: 22: unsigned char loop:1;
+[; ;timer_lib.h: 23: unsigned char flag:1;
+[; ;timer_lib.h: 24: unsigned char pause:1;
+[; ;timer_lib.h: 25: }t_timer;
+[; ;timer_lib.h: 31: extern t_timer timerMem[CANT_TIMERS];
+[; ;timer_lib.h: 32: extern type_timerDelayConstant timerDelayConstant[CANT_TIMERS];
+[; ;timer_lib.h: 67: void timerDriver(char i);
+"13 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\timer\20220922 2300\timer.c
+[v _timerMem `S1 ~T0 . `E3 3 e ]
+[; ;timer.c: 13: t_timer timerMem[CANT_TIMERS];
+"13 J:\0000 FEDE\16GB\0000 INTERIOR\DE_DISP_HAND\SW\DE_HAND\timer_delays.h
+[v _timerDelayConstant `Ci ~T0 . `E3 3 e ]
+[i _timerDelayConstant
+:U ..
+"15
+-> 50 `i
+"16
+-> 200 `i
+"17
+-> 30 `i
+..
+]
+[; ;timer_delays.h: 13: type_timerDelayConstant timerDelayConstant[CANT_TIMERS]=
+[; ;timer_delays.h: 14: {
+[; ;timer_delays.h: 15: 50,
+[; ;timer_delays.h: 16: 200,
+[; ;timer_delays.h: 17: 30,
+[; ;timer_delays.h: 18: };
+"18 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\timer\20220922 2300\timer.c
+[v _timerDriver `(v ~T0 1 ef1`uc ]
+{
+[; ;timer.c: 17: void timerDriver(char i)
+[; ;timer.c: 18: {
+[e :U _timerDriver ]
+[v _i `uc ~T0 1 r1 ]
+[f ]
+[; ;timer.c: 20: if(!timerMem[i].pause && timerMem[i].prescaler>0)
+"20
+[e $ ! && ! != -> . *U + &U _timerMem * -> _i `ux -> -> # *U &U _timerMem `ui `ux 3 `i -> -> -> 0 `i `uc `i > . *U + &U _timerMem * -> _i `ux -> -> # *U &U _timerMem `ui `ux 0 -> 0 `i 3  ]
+[; ;timer.c: 21: {
+"21
+{
+[; ;timer.c: 22: timerMem[i].prescaler--;
+"22
+[e -- . *U + &U _timerMem * -> _i `ux -> -> # *U &U _timerMem `ui `ux 0 -> 1 `i ]
+[; ;timer.c: 23: if(timerMem[i].prescaler==0)
+"23
+[e $ ! == . *U + &U _timerMem * -> _i `ux -> -> # *U &U _timerMem `ui `ux 0 -> 0 `i 4  ]
+[; ;timer.c: 24: {
+"24
+{
+[; ;timer.c: 25: timerMem[i].flag=1;
+"25
+[e = . *U + &U _timerMem * -> _i `ux -> -> # *U &U _timerMem `ui `ux 2 -> -> 1 `i `uc ]
+[; ;timer.c: 26: if(timerMem[i].loop) timerMem[i].prescaler=timerDelayConstant[i];
+"26
+[e $ ! != -> . *U + &U _timerMem * -> _i `ux -> -> # *U &U _timerMem `ui `ux 1 `i -> -> -> 0 `i `uc `i 5  ]
+[e = . *U + &U _timerMem * -> _i `ux -> -> # *U &U _timerMem `ui `ux 0 *U + &U _timerDelayConstant * -> _i `ux -> -> # *U &U _timerDelayConstant `ui `ux ]
+[e :U 5 ]
+"27
+}
+[e :U 4 ]
+"28
+}
+[e :U 3 ]
+[; ;timer.c: 27: }
+[; ;timer.c: 28: }
+[; ;timer.c: 29: }
+"29
+[e :UE 2 ]
+}

@@ -1,0 +1,78 @@
+
+# 1 "J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\stdlib\stdlib.c"
+
+# 15 "J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\stdlib\stdlib.h"
+int atoi(char *s);
+long int atol(char *s);
+
+# 23 "J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\stdio\20220815 0221\stdio.h"
+enum e_mode_fseek{SEEK_END,SEEK_CUR,SEEK_SET};
+
+# 45
+typedef struct
+{
+char flg;
+char *nxr;
+char *nxw;
+char *bas;
+char nr;
+char nw;
+char bufsiz;
+}FILE;
+
+# 65
+char fputc(char c, FILE *stream);
+char fgetc(FILE *stream);
+void fseek(FILE *fp,int offset,int mode);
+void unget(FILE *stream);
+
+
+
+
+void fprintf(FILE *fp,char *fmt,...);
+void fprinti(FILE *fp,char *str);
+
+char *intToStr(int num,char *str,char strLen);
+char *longToStr(long num,char *str,char strLen);
+void ucharToStr(unsigned char num,char *str,char strLen);
+char *uToStr(unsigned int num,char *str,char strLen);
+
+# 23 "J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\stdlib\stdlib.c"
+int atoi(char *s)
+{
+int res=0;
+char sign=1;
+char i=0;
+
+if(s[0]=='-')
+{
+sign = -1;
+i++;
+}
+for(;s[i]!=0;++i)
+{
+res=(res*10)+(s[i]-'0');
+}
+return sign*res;
+}
+
+
+
+long int atol(char *s)
+{
+long int res=0;
+char sign=1;
+char i=0;
+
+if(s[0]=='-')
+{
+sign = -1;
+i++;
+}
+for(;s[i]!=0;++i)
+{
+res=(res*10)+(s[i]-'0');
+}
+return sign*res;
+}
+

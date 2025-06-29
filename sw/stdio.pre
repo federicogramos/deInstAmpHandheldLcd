@@ -1,0 +1,383 @@
+
+# 1 "J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\stdio\20220815 0221\stdio.c"
+
+# 23 "J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\stdio\20220815 0221\stdio.h"
+enum e_mode_fseek{SEEK_END,SEEK_CUR,SEEK_SET};
+
+# 45
+typedef struct
+{
+char flg;
+char *nxr;
+char *nxw;
+char *bas;
+char nr;
+char nw;
+char bufsiz;
+}FILE;
+
+# 65
+char fputc(char c, FILE *stream);
+char fgetc(FILE *stream);
+void fseek(FILE *fp,int offset,int mode);
+void unget(FILE *stream);
+
+
+
+
+void fprintf(FILE *fp,char *fmt,...);
+void fprinti(FILE *fp,char *str);
+
+char *intToStr(int num,char *str,char strLen);
+char *longToStr(long num,char *str,char strLen);
+void ucharToStr(unsigned char num,char *str,char strLen);
+char *uToStr(unsigned int num,char *str,char strLen);
+
+# 4 "C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\include\string.h"
+typedef int ptrdiff_t;
+typedef unsigned size_t;
+typedef unsigned short wchar_t;
+
+
+extern int errno;
+
+# 22
+extern void * memcpy(void *, const void *, size_t);
+extern void * memmove(void *, const void *, size_t);
+extern void * memset(void *, int, size_t);
+
+# 35
+extern char * strcat(char *, const char *);
+extern char * strcpy(char *, const char *);
+extern char * strncat(char *, const char *, size_t);
+extern char * strncpy(char *, const char *, size_t);
+extern char * strdup(const char *);
+extern char * strtok(char *, const char *);
+
+
+extern int memcmp(const void *, const void *, size_t);
+extern int strcmp(const char *, const char *);
+extern int stricmp(const char *, const char *);
+extern int strncmp(const char *, const char *, size_t);
+extern int strnicmp(const char *, const char *, size_t);
+extern void * memchr(const void *, int, size_t);
+extern size_t strcspn(const char *, const char *);
+extern char * strpbrk(const char *, const char *);
+extern size_t strspn(const char *, const char *);
+extern char * strstr(const char *, const char *);
+extern char * stristr(const char *, const char *);
+extern char * strerror(int);
+extern size_t strlen(const char *);
+extern char * strchr(const char *, int);
+extern char * strichr(const char *, int);
+extern char * strrchr(const char *, int);
+extern char * strrichr(const char *, int);
+
+# 31 "C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\include\stdarg.h"
+typedef void * va_list[1];
+
+#pragma inline(__va_start)
+extern void * __va_start(void);
+
+#pragma inline(__va_arg)
+extern void * __va_arg(void *, ...);
+
+# 50 "J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\stdio\20220815 0221\stdio.c"
+char fputc(char c,FILE *stream)
+{
+if(stream->nw==0)
+{
+stream->flg|=(1<<3);
+return (-1);
+}
+else
+{
+--stream->nw;
+return *((stream->nxw)++)=c;
+}
+}
+
+# 73
+char fgetc(FILE *stream)
+{
+if(stream->nr==0)
+{
+stream->flg|=(1<<3);
+return (-1);
+}
+else
+{
+--(stream->nr);
+return *((stream->nxr)++);
+}
+}
+
+
+void unget(FILE *stream)
+{
+if((stream->nr++)==0) stream->flg&=~(1<<3);
+--(stream->nxr);
+}
+
+# 22 "J:\0000 FEDE\16GB\0000 INTERIOR\DE_DISP_HAND\SW\DE_HAND\lcd_user_definitions.h"
+char lcdBuffer[(2*8+1)]={'1','2','3','_','c','_','d','x','\n',
+'$','.','?','.','+','.','*','z'};
+
+# 33 "J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\lcd\20220815 0241\lcd_lib.h"
+void lcdFsmInit(void);
+void lcdFsmParser(void);
+void lcdNibbleSend(char mode,char command);
+
+# 46
+enum e_lcdEvent
+{
+LCD_EVENT_UNFINISHED,
+LCD_EVENT_TIMEOUT_30MS,
+LCD_EVENT_TIMEOUT_30MS_SKIP_DISPLAY_REFRESH,
+LCD_EVENT_REFRESH_FINISHED,
+LCD_EVENT_FIRST_LINE_FINISHED,
+LCD_EVENT_TABLE_END
+};
+
+# 60
+enum e_lcdState
+{
+LCD_STATE_WAIT_TO_SET_DATA_LENGTH,
+LCD_STATE_WAIT_TO_CLEAR_DISPLAY,
+LCD_STATE_WAIT_TO_SET_ENTRY_MODE,
+LCD_STATE_WAIT_TO_SET_VISIBILITY,
+LCD_STATE_WAIT_FOR_REFRESH,
+LCD_STATE_COMMAND_FIRST_LINE,
+LCD_STATE_COMMAND_SECOND_LINE,
+LCD_STATE_CANT_STATES
+};
+
+# 76
+enum e_lcdAction
+{
+LCD_ACTION_SET_DATA_LENGTH,
+LCD_ACTION_CLEAR_DISPLAY,
+LCD_ACTION_SET_ENTRY_MODE,
+LCD_ACTION_SET_VISIBILITY,
+LCD_ACTION_REWIND,
+LCD_ACTION_SEND_CHARACTER,
+LCD_ACTION_INIT_TMR_30MS,
+LCD_ACTION_START_LCD_SECOND_LINE,
+LCD_ACTION_SET_CURSOR_POSITION,
+LCD_ACTION_DO_NOTHING
+};
+
+# 109
+typedef const struct t_lcdTransition
+
+{
+char event;
+char action;
+char nextState;
+}t_lcdState;
+
+typedef struct
+{
+unsigned visibility:1;
+unsigned cursorVisibility:1;
+unsigned cursorBlink:1;
+unsigned cursorDirection:1;
+unsigned shift:1;
+unsigned visibility_refresh:1;
+unsigned cursorVisibility_refresh:1;
+unsigned cursorBlink_refresh:1;
+unsigned cursorDirection_refresh:1;
+unsigned shift_refresh:1;
+unsigned display_refresh:1;
+
+unsigned cursor_position_refresh:1;
+unsigned cursor_position_x;
+unsigned cursor_position_y;
+}t_lcdSettings;
+
+# 205
+extern char lcdBuffer[(2*8+1)];
+extern FILE lcdFile;
+extern t_lcdSettings lcdSettings;
+
+# 117 "J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\stdio\20220815 0221\stdio.c"
+void fseek(FILE *fp,int offset,int mode)
+{
+fp->flg&=~(1<<3);
+switch(mode)
+{
+case SEEK_SET:
+if(fp->flg&(1<<0))
+{
+(fp->nxr)=fp->bas;
+(fp->nr)=fp->bufsiz;
+}
+if(fp->flg&(1<<1))
+{
+(fp->nxw)=fp->bas;
+(fp->nw)=fp->bufsiz;
+}
+break;
+case SEEK_END:
+if(fp->flg&(1<<0))
+{
+(fp->nxr)=fp->bas+fp->bufsiz;
+(fp->nw)=0;
+}
+if(fp->flg&(1<<1))
+{
+(fp->nxw)=fp->bas+fp->bufsiz;
+(fp->nw)=0;
+}
+break;
+case SEEK_CUR:
+if(fp->flg&(1<<0))
+{
+(fp->nxr)+=offset;
+(fp->nw)-=offset;
+}
+if(fp->flg&(1<<1))
+{
+(fp->nxw)=(fp->nxw)+offset;
+(fp->nw)-=offset;
+
+
+
+}
+break;
+}
+}
+
+# 176
+void fprintf(FILE *fp,char *fmt,...)
+{
+va_list ap;
+char str[12];
+char *p,*sval;
+int ival;
+long int lval;
+double dval;
+unsigned uval;
+
+char *v;
+
+*ap = __va_start();
+for(p=fmt;*p;p++)
+{
+if(*p!='%')
+{
+(void)fputc(*p,fp);
+continue;
+}
+switch(*++p)
+{
+case 'd':
+case 'i':
+ival=(*(int *)__va_arg((*(int **)ap), (int)0));
+v=intToStr(ival,str,12);
+while(*v) fputc(*(v++),fp);
+break;
+case 'l':
+p++;
+
+lval=(*(long *)__va_arg((*(long **)ap), (long)0));
+v=longToStr(lval,str,12);
+while(*v) fputc(*(v++),fp);
+break;
+case 'c':
+ival=(*(int *)__va_arg((*(int **)ap), (int)0));
+(void)fputc((char)ival,fp);
+break;
+case 'u':
+uval=(*(unsigned int *)__va_arg((*(unsigned int **)ap), (unsigned int)0));
+v=uToStr(uval,str,12);
+while(*v) fputc(*(v++),fp);
+break;
+case 'e':
+dval=(*(double *)__va_arg((*(double **)ap), (double)0));
+
+break;
+case 'f':
+dval = (*(double *)__va_arg((*(double **)ap), (double)0));
+
+break;
+case 'g':
+dval = (*(double *)__va_arg((*(double **)ap), (double)0));
+
+break;
+case 's':
+for(sval=(*(char * *)__va_arg((*(char * **)ap), (char *)0));*sval;sval++) (void)fputc(*sval,fp);
+break;
+default:
+(void)fputc(*p,fp);
+break;
+}
+}
+;
+}
+
+# 254
+char *intToStr(int num,char *str,char strLen)
+{
+
+str+=strLen-1;
+*str=0;
+if(num<0)
+{
+do *(--str)='0'-(num%10);
+while((num/=10)!=0);
+*(--str)='-';
+}
+else
+{
+do *(--str)='0'+(num%10);
+while((num/=10)!=0);
+}
+return str;
+
+}
+
+# 278
+char *longToStr(long num,char *str,char strLen)
+{
+str+=strLen-1;
+*str=0;
+if(num<0)
+{
+do *(--str)='0'-(num%10);
+while((num/=10)!=0);
+*(--str)='-';
+}
+else
+{
+do *(--str)='0'+(num%10);
+while((num/=10)!=0);
+}
+return str;
+}
+
+# 307
+void ucharToStr(unsigned char num,char *str,char strLen)
+{
+char i;
+
+str+=strLen-1;
+for(i=0;i<strLen;i++)
+{
+*(--str)='0'+(num%10);
+num/=10;
+}
+}
+
+char *uToStr(unsigned int num,char *str,char strLen)
+{
+str+=strLen-1;
+*str=0;
+
+
+do *(--str)='0'+(num%10);
+while((num/=10)!=0);
+
+return str;
+
+}

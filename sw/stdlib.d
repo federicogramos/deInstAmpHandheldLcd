@@ -1,0 +1,1 @@
+stdlib.d stdlib.p1: J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\stdlib\stdlib.c J:/0000\ FEDE/16GB/LIB_SW_PIC/lib_sw_pic/stdio/20220815\ 0221/stdio.h J:/0000\ FEDE/16GB/LIB_SW_PIC/lib_sw_pic/stdlib/stdlib.h

@@ -1,0 +1,1325 @@
+[p LITE_MODE AUTOSTATIC LFSROK ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F46K80 ]
+[e E18221 e_pulsadorPinFastAlias `uc
+P0N 0
+P1N 1
+P2N 2
+P3N 3
+P4N 4
+P5N 5
+P6N 6
+P7N 7
+P8N 8
+PULS_PIN_CANT 9
+]
+"67 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\timer\20220922 2300\timer_lib.h
+[e E18278 e_timer `uc
+TMR_LCD 0
+TMR_1S 1
+TMR_BUZZER 2
+CANT_TIMERS 3
+]
+"34 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\lcd\20220815 0241\lcd_lib.h
+"79 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\encoder\20220908 1651\encoder_lib.h
+[e E18424 e_encoder_flags `uc
+ENCODER_NOTHING 0
+ENCODER_CW 1
+ENCODER_CCW 2
+]
+[e E18421 e_encoder_names `uc
+E0 0
+ENCODER_CANT 1
+]
+"34 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\pwm_sw\20220831 0300\pwm_sw_lib.h
+"207 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\lcd\20220815 0241\lcd_lib.h
+"11999 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\include\pic18f46k80.h
+"61 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\pulsadorPinFast_1ms\20220815 0221\pulsadorPinFast_1ms_lib.h
+[e E18260 e_flanco `uc
+FLANCO_N 0
+FLANCO_P 1
+]
+"12059 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\include\pic18f46k80.h
+"12085
+"12025
+"36 J:\0000 FEDE\16GB\0000 INTERIOR\DE_DISP_HAND\SW\DE_HAND\interrupts.c
+[v F18468 `(v  1 t 0 ]
+"17905 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\include\pic18f46k80.h
+"14437
+"14367
+"10721
+"10639
+"12838
+"12775
+"14284
+"20103
+"11999
+"12727
+"12796
+"79 J:\0000 FEDE\16GB\0000 INTERIOR\DE_DISP_HAND\SW\DE_HAND\system.c
+[e E18210 e_pulsadorPinFastAlias `uc
+P0N 0
+P1N 1
+P2N 2
+P3N 3
+P4N 4
+P5N 5
+P6N 6
+P7N 7
+P8N 8
+PULS_PIN_CANT 9
+]
+"33 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\lcd\20220815 0241\lcd_lib.h
+[e E18267 e_timer `uc
+TMR_LCD 0
+TMR_1S 1
+TMR_BUZZER 2
+CANT_TIMERS 3
+]
+"32 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\timer\20220922 2300\timer_lib.h
+"37 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\pwm_sw\20220831 0300\pwm_sw_lib.h
+"58 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\adc18f\20220912 1913\adc18f_lib.h
+"67 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\stdio\20220815 0221\stdio.h
+[e E18287 e_mode_fseek `uc
+SEEK_END 0
+SEEK_CUR 1
+SEEK_SET 2
+]
+"65
+"89 J:\0000 FEDE\16GB\0000 INTERIOR\DE_DISP_HAND\SW\DE_HAND\main.c
+[e E18221 e_pulsadorPinFastAlias `uc
+P0N 0
+P1N 1
+P2N 2
+P3N 3
+P4N 4
+P5N 5
+P6N 6
+P7N 7
+P8N 8
+PULS_PIN_CANT 9
+]
+"11756 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\include\pic18f46k80.h
+"11962
+"65 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\eeprom_18f\20220815 0220\eeprom_18f.c
+[e E18267 e_lcdEvent `uc
+LCD_EVENT_UNFINISHED 0
+LCD_EVENT_TIMEOUT_30MS 1
+LCD_EVENT_TIMEOUT_30MS_SKIP_DISPLAY_REFRESH 2
+LCD_EVENT_REFRESH_FINISHED 3
+LCD_EVENT_FIRST_LINE_FINISHED 4
+LCD_EVENT_TABLE_END 5
+]
+[e E18283 e_lcdAction `uc
+LCD_ACTION_SET_DATA_LENGTH 0
+LCD_ACTION_CLEAR_DISPLAY 1
+LCD_ACTION_SET_ENTRY_MODE 2
+LCD_ACTION_SET_VISIBILITY 3
+LCD_ACTION_REWIND 4
+LCD_ACTION_SEND_CHARACTER 5
+LCD_ACTION_INIT_TMR_30MS 6
+LCD_ACTION_START_LCD_SECOND_LINE 7
+LCD_ACTION_SET_CURSOR_POSITION 8
+LCD_ACTION_DO_NOTHING 9
+]
+[e E18274 e_lcdState `uc
+LCD_STATE_WAIT_TO_SET_DATA_LENGTH 0
+LCD_STATE_WAIT_TO_CLEAR_DISPLAY 1
+LCD_STATE_WAIT_TO_SET_ENTRY_MODE 2
+LCD_STATE_WAIT_TO_SET_VISIBILITY 3
+LCD_STATE_WAIT_FOR_REFRESH 4
+LCD_STATE_COMMAND_FIRST_LINE 5
+LCD_STATE_COMMAND_SECOND_LINE 6
+LCD_STATE_CANT_STATES 7
+]
+"35 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\lcd\20220815 0241\lcd_lib.h
+[e E18196 e_timer `uc
+TMR_LCD 0
+TMR_1S 1
+TMR_BUZZER 2
+CANT_TIMERS 3
+]
+"68 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\stdio\20220815 0221\stdio.h
+"12025 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\include\pic18f46k80.h
+"325 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\lcd\20220815 0241\lcd.c
+[e E1 e_mode_fseek `uc
+SEEK_END 0
+SEEK_CUR 1
+SEEK_SET 2
+]
+"330 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\stdio\20220815 0221\stdio.c
+"40 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\pwm_sw\20220831 0300\pwm_sw.c
+[e E18194 e_pulsadorPinFastAlias `uc
+P0N 0
+P1N 1
+P2N 2
+P3N 3
+P4N 4
+P5N 5
+P6N 6
+P7N 7
+P8N 8
+PULS_PIN_CANT 9
+]
+"106 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\pulsadorPinFast_1ms\20220815 0221\pulsadorPinFast_1ms.c
+[e E18208 e_encoder_names `uc
+E0 0
+ENCODER_CANT 1
+]
+[e E18215 e_encoderPulsAlias `uc
+ENCODER_PIN_AN 0
+ENCODER_PIN_BN 1
+ENCODER_PIN_AP 2
+ENCODER_PIN_BP 3
+ENCODER_PIN_CANT 4
+]
+[e E18229 e_encoder_flanco `uc
+ENCODER_FLANCO_N 0
+ENCODER_FLANCO_P 1
+]
+"12085 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\include\pic18f46k80.h
+[e E18221 e_encoder_states `uc
+ENCODER_STATE_IDLE 0
+ENCODER_STATE_A 1
+ENCODER_STATE_AB 2
+ENCODER_STATE_ABX 3
+ENCODER_STATE_B 4
+ENCODER_STATE_BA 5
+ENCODER_STATE_BAY 6
+]
+[e E18211 e_encoder_flags `uc
+ENCODER_NOTHING 0
+ENCODER_CW 1
+ENCODER_CCW 2
+]
+"137 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\encoder\20220908 1651\encoder.c
+"13975 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\include\pic18f46k80.h
+"15293
+"13925
+"13888
+"112 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\adc18f\20220912 1913\adc18f.c
+[e E3 e_timer `uc
+TMR_LCD 0
+TMR_1S 1
+TMR_BUZZER 2
+CANT_TIMERS 3
+]
+"5 ../../common/abdiv.c
+[v ___abdiv `(c  1 e 1 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\abmod.c
+[v ___abmod `(c  1 e 1 0 ]
+"32 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\abtofl.c
+[v ___abtofl `(d  1 e 3 0 ]
+"34 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\abtoft.c
+[v ___abtoft `(f  1 e 3 0 ]
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\aldiv.c
+[v ___aldiv `(l  1 e 4 0 ]
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\almod.c
+[v ___almod `(l  1 e 4 0 ]
+"37 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\altofl.c
+[v ___altofl `(d  1 e 3 0 ]
+"43 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\altoft.c
+[v ___altoft `(f  1 e 3 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\asfladd.c
+[v ___asfladd `(d  1 e 3 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\asfldiv.c
+[v ___asfldiv `(d  1 e 3 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\asflmul.c
+[v ___asflmul `(d  1 e 3 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\asflsub.c
+[v ___asflsub `(d  1 e 3 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\asftadd.c
+[v ___asftadd `(f  1 e 3 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\asftdiv.c
+[v ___asftdiv `(f  1 e 3 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\asftmul.c
+[v ___asftmul `(f  1 e 3 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\asftsub.c
+[v ___asftsub `(f  1 e 3 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\aslmul.c
+[v ___aslmul `(ul  1 e 4 0 ]
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\atdiv.c
+[v ___atdiv `(m  1 e 3 0 ]
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\atmod.c
+[v ___atmod `(m  1 e 3 0 ]
+"38 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\attofl.c
+[v ___attofl `(d  1 e 3 0 ]
+"38 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\attoft.c
+[v ___attoft `(f  1 e 3 0 ]
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\awdiv.c
+[v ___awdiv `(i  1 e 2 0 ]
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\awmod.c
+[v ___awmod `(i  1 e 2 0 ]
+"32 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\awtofl.c
+[v ___awtofl `(d  1 e 3 0 ]
+"33 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\awtoft.c
+[v ___awtoft `(f  1 e 3 0 ]
+"3 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\bmul.c
+[v ___bmul `(uc  1 e 1 0 ]
+"64 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\double.c
+[v ___flpack `(d  1 e 3 0 ]
+"89 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\fladd.c
+[v ___fladd `(d  1 e 3 0 ]
+"50 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\fldiv.c
+[v ___fldiv `(d  1 e 3 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\flge.c
+[v ___flge `(b  1 e 0 0 ]
+"51 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\flmul.c
+[v ___flmul `(d  1 e 3 0 ]
+"16 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\flneg.c
+[v ___flneg `(d  1 e 3 0 ]
+"63 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\float.c
+[v ___ftpack `(f  1 e 3 0 ]
+"22 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\flsub.c
+[v ___flsub `(d  1 e 3 0 ]
+"44 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\fltol.c
+[v ___fltol `(l  1 e 4 0 ]
+"87 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\ftadd.c
+[v ___ftadd `(f  1 e 3 0 ]
+"50 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\ftdiv.c
+[v ___ftdiv `(f  1 e 3 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\ftge.c
+[v ___ftge `(b  1 e 0 0 ]
+"52 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\ftmul.c
+[v ___ftmul `(f  1 e 3 0 ]
+"16 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\ftneg.c
+[v ___ftneg `(f  1 e 3 0 ]
+"22 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\ftsub.c
+[v ___ftsub `(f  1 e 3 0 ]
+"45 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\fttol.c
+[v ___fttol `(l  1 e 4 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lbdiv.c
+[v ___lbdiv `(uc  1 e 1 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lbmod.c
+[v ___lbmod `(uc  1 e 1 0 ]
+"28 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lbtofl.c
+[v ___lbtofl `(d  1 e 3 0 ]
+"28 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lbtoft.c
+[v ___lbtoft `(f  1 e 3 0 ]
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lldiv.c
+[v ___lldiv `(ul  1 e 4 0 ]
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\llmod.c
+[v ___llmod `(ul  1 e 4 0 ]
+"31 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lltofl.c
+[v ___lltofl `(d  1 e 3 0 ]
+"36 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lltoft.c
+[v ___lltoft `(f  1 e 3 0 ]
+"3 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lmul.c
+[v ___lmul `(ul  1 e 4 0 ]
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\ltdiv.c
+[v ___ltdiv `(um  1 e 3 0 ]
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\ltmod.c
+[v ___ltmod `(um  1 e 3 0 ]
+"31 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lttofl.c
+[v ___lttofl `(d  1 e 3 0 ]
+"31 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lttoft.c
+[v ___lttoft `(f  1 e 3 0 ]
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lwdiv.c
+[v ___lwdiv `(ui  1 e 2 0 ]
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lwmod.c
+[v ___lwmod `(ui  1 e 2 0 ]
+"29 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lwtofl.c
+[v ___lwtofl `(d  1 e 3 0 ]
+"29 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lwtoft.c
+[v ___lwtoft `(f  1 e 3 0 ]
+"3 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\tmul.c
+[v ___tmul `(um  1 e 3 0 ]
+"3 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\wmul.c
+[v ___wmul `(ui  1 e 2 0 ]
+"36 J:\0000 FEDE\16GB\0000 INTERIOR\DE_DISP_HAND\SW\DE_HAND\interrupts.c
+[v _isr0 `I(v  1 e 0 0 ]
+"53
+[v _isr_timer1_low_priority `(v  1 e 0 0 ]
+"114
+[v _isr_timer3_low_priority `(v  1 e 0 0 ]
+"32 J:\0000 FEDE\16GB\0000 INTERIOR\DE_DISP_HAND\SW\DE_HAND\main.c
+[v _main `(v  1 e 0 0 ]
+"28 J:\0000 FEDE\16GB\0000 INTERIOR\DE_DISP_HAND\SW\DE_HAND\system.c
+[v _systemInit `(v  1 e 0 0 ]
+"42 J:\0000 FEDE\16GB\0000 INTERIOR\DE_DISP_HAND\SW\DE_HAND\thisProject.c
+[v _thisProjectInit `(v  1 e 0 0 ]
+"65
+[v _thisProject_driver `(v  1 e 0 0 ]
+"79
+[v _thisProject_get_event `(v  1 e 0 0 ]
+"95
+[v _showOnBoardDisplay `(v  1 e 0 0 ]
+"23 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\adc18f\20220912 1913\adc18f.c
+[v _adcDriver `(v  1 e 0 0 ]
+"50
+[v _getConv `(i  1 e 2 0 ]
+"61
+[v _isr_adc `(v  1 e 0 0 ]
+"71
+[v _adcAllPortsDigital_18F46K80 `(v  1 e 0 0 ]
+"80
+[v _adcSetup_18F46K80 `(v  1 e 0 0 ]
+"33 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\eeprom_18f\20220815 0220\eeprom_18f.c
+[v _ee_write_byte `(v  1 e 0 0 ]
+"59
+[v _ee_read_byte `(uc  1 e 1 0 ]
+"39 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\encoder\20220908 1651\encoder.c
+[v _encoderPin_driver `(v  1 e 0 0 ]
+"57
+[v _encoder_driver `(v  1 e 0 0 ]
+"130 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\lcd\20220815 0241\lcd.c
+[v _lcdAction000_set_data_length `(v  1 e 0 0 ]
+"136
+[v _lcdAction001_clear_display `(v  1 e 0 0 ]
+"142
+[v _lcdAction002_set_entry_mode `(v  1 e 0 0 ]
+"153
+[v _lcdAction003_set_visibility `(v  1 e 0 0 ]
+"165
+[v _lcdAction004_rewind `(v  1 e 0 0 ]
+"174
+[v _lcdAction005_send_character `(v  1 e 0 0 ]
+"182
+[v _lcdAction006_init_tmr_30ms `(v  1 e 0 0 ]
+"187
+[v _lcdAction007_lcd_second_line `(v  1 e 0 0 ]
+"192
+[v _lcdAction008_set_cursor_position `(v  1 e 0 0 ]
+"207
+[v _lcdRunAction `(v  1 e 0 0 ]
+"228
+[v _lcdGetEvent `(uc  1 e 1 0 ]
+"289
+[v _lcdFsmParser `(v  1 e 0 0 ]
+"304
+[v _lcdFsmInit `(v  1 e 0 0 ]
+"317
+[v _lcdNibbleSend `(v  1 e 0 0 ]
+"37 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\pulsadorPinFast_1ms\20220815 0221\pulsadorPinFast_1ms.c
+[v _puls_dc_driver `(v  1 e 0 0 ]
+"60
+[v _puls_ac_fn_dc_driver `(v  1 e 0 0 ]
+"87
+[v _puls_ac_fp_dc_driver `(v  1 e 0 0 ]
+"22 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\pwm_sw\20220831 0300\pwm_sw.c
+[v _pwm_sw_init `(v  1 e 0 0 ]
+"29
+[v _pwm_sw_driver `(v  1 e 0 0 ]
+"51 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\stdio\20220815 0221\stdio.c
+[v _fputc `(uc  1 e 1 0 ]
+"74
+[v _fgetc `(uc  1 e 1 0 ]
+"89
+[v _unget `(v  1 e 0 0 ]
+"118
+[v _fseek `(v  1 e 0 0 ]
+"177
+[v _fprintf `(v  1 e 0 0 ]
+"255
+[v _intToStr `(*.Muc  1 e 2 0 ]
+"279
+[v _longToStr `(*.Muc  1 e 2 0 ]
+"308
+[v _ucharToStr `(v  1 e 0 0 ]
+"320
+[v _uToStr `(*.Muc  1 e 2 0 ]
+"18 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\timer\20220922 2300\timer.c
+[v _timerDriver `(v  1 e 0 0 ]
+[s S561 . 1 `uc 1 CTMUDS 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 REPU 1 0 :1:6 
+`uc 1 RDPU 1 0 :1:7 
+]
+"10639 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\include\pic18f46k80.h
+[s S566 . 1 `uc 1 PMPTTL 1 0 :1:0 
+]
+[u S568 . 1 `S561 1 . 1 0 `S566 1 . 1 0 ]
+[v _PADCFG1bits `VS568  1 e 1 @3926 ]
+"10721
+[v _WPUB `Vuc  1 e 1 @3931 ]
+"11744
+[v _EEDATA `Vuc  1 e 1 @3955 ]
+"11756
+[v _EEADR `Vuc  1 e 1 @3956 ]
+"11930
+[v _EECON2 `Vuc  1 e 1 @3966 ]
+[s S1196 . 1 `uc 1 RD 1 0 :1:0 
+`uc 1 WR 1 0 :1:1 
+`uc 1 WREN 1 0 :1:2 
+`uc 1 WRERR 1 0 :1:3 
+`uc 1 FREE 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 CFGS 1 0 :1:6 
+`uc 1 EEPGD 1 0 :1:7 
+]
+"11962
+[s S1205 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 EEFS 1 0 :1:6 
+]
+[u S1208 . 1 `S1196 1 . 1 0 `S1205 1 . 1 0 ]
+[v _EECON1bits `VS1208  1 e 1 @3967 ]
+[s S124 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"11999
+[s S133 . 1 `uc 1 RA 1 0 :8:0 
+]
+[s S135 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 LVDIN 1 0 :1:5 
+]
+[s S138 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 RA4 1 0 :1:4 
+]
+[s S141 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 RJPU 1 0 :1:7 
+]
+[s S144 . 1 `uc 1 ULPWUIN 1 0 :1:0 
+]
+[u S146 . 1 `S124 1 . 1 0 `S133 1 . 1 0 `S135 1 . 1 0 `S138 1 . 1 0 `S141 1 . 1 0 `S144 1 . 1 0 ]
+[v _PORTAbits `VS146  1 e 1 @3968 ]
+[s S278 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"12025
+[s S287 . 1 `uc 1 RB 1 0 :8:0 
+]
+[s S289 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[u S292 . 1 `S278 1 . 1 0 `S287 1 . 1 0 `S289 1 . 1 0 ]
+[v _PORTBbits `VS292  1 e 1 @3969 ]
+[s S198 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"12059
+[s S207 . 1 `uc 1 RC 1 0 :8:0 
+]
+[s S209 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 CCP2 1 0 :1:1 
+]
+[s S212 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PA1 1 0 :1:2 
+]
+[s S215 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 PA2 1 0 :1:1 
+]
+[u S218 . 1 `S198 1 . 1 0 `S207 1 . 1 0 `S209 1 . 1 0 `S212 1 . 1 0 `S215 1 . 1 0 ]
+[v _PORTCbits `VS218  1 e 1 @3970 ]
+[s S245 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+"12085
+[s S254 . 1 `uc 1 RD 1 0 :8:0 
+]
+[s S256 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 SS2 1 0 :1:7 
+]
+[u S259 . 1 `S245 1 . 1 0 `S254 1 . 1 0 `S256 1 . 1 0 ]
+[v _PORTDbits `VS259  1 e 1 @3971 ]
+[s S311 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 TMR1GIF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 PSPIF 1 0 :1:7 
+]
+"12727
+[s S320 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+]
+[u S324 . 1 `S311 1 . 1 0 `S320 1 . 1 0 ]
+[v _PIE1bits `VS324  1 e 1 @3997 ]
+"12751
+[v _PIR1bits `VS324  1 e 1 @3998 ]
+"12775
+[v _IPR1bits `VS324  1 e 1 @3999 ]
+[s S579 . 1 `uc 1 TMR3GIP 1 0 :1:0 
+`uc 1 TMR3IP 1 0 :1:1 
+`uc 1 HLVDIP 1 0 :1:2 
+`uc 1 BCLIP 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 OSCFIP 1 0 :1:7 
+]
+"12796
+[s S586 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 LVDIP 1 0 :1:2 
+]
+[u S589 . 1 `S579 1 . 1 0 `S586 1 . 1 0 ]
+[v _PIE2bits `VS589  1 e 1 @4000 ]
+"12838
+[v _IPR2bits `VS589  1 e 1 @4002 ]
+[s S685 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_T3SYNC 1 0 :1:2 
+]
+"13444
+[s S688 . 1 `uc 1 TMR3ON 1 0 :1:0 
+`uc 1 RD16 1 0 :1:1 
+`uc 1 nT3SYNC 1 0 :1:2 
+`uc 1 SOSCEN 1 0 :1:3 
+`uc 1 T3CKPS 1 0 :2:4 
+`uc 1 TMR3CS 1 0 :2:6 
+]
+[s S695 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 T3CKPS0 1 0 :1:4 
+`uc 1 T3CKPS1 1 0 :1:5 
+`uc 1 TMR3CS0 1 0 :1:6 
+`uc 1 TMR3CS1 1 0 :1:7 
+]
+[s S701 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 RD163 1 0 :1:7 
+]
+[s S704 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SOSCEN3 1 0 :1:3 
+]
+[s S707 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 T3RD16 1 0 :1:7 
+]
+[u S710 . 1 `S685 1 . 1 0 `S688 1 . 1 0 `S695 1 . 1 0 `S701 1 . 1 0 `S704 1 . 1 0 `S707 1 . 1 0 ]
+[v _T3CONbits `VS710  1 e 1 @4017 ]
+"13447
+[v _TMR3 `Vus  1 e 2 @4018 ]
+[s S1867 . 1 `uc 1 ADCS 1 0 :3:0 
+`uc 1 ACQT 1 0 :3:3 
+`uc 1 . 1 0 :1:6 
+`uc 1 ADFM 1 0 :1:7 
+]
+"13888
+[s S1872 . 1 `uc 1 ADCS0 1 0 :1:0 
+`uc 1 ADCS1 1 0 :1:1 
+`uc 1 ADCS2 1 0 :1:2 
+`uc 1 ACQT0 1 0 :1:3 
+`uc 1 ACQT1 1 0 :1:4 
+`uc 1 ACQT2 1 0 :1:5 
+]
+[u S1879 . 1 `S1867 1 . 1 0 `S1872 1 . 1 0 ]
+[v _ADCON2bits `VS1879  1 e 1 @4032 ]
+[s S1814 . 1 `uc 1 CHSN 1 0 :3:0 
+`uc 1 VNCFG 1 0 :1:3 
+`uc 1 VCFG 1 0 :2:4 
+`uc 1 TRIGSEL 1 0 :2:6 
+]
+"13925
+[s S1819 . 1 `uc 1 CHSN0 1 0 :1:0 
+`uc 1 CHSN1 1 0 :1:1 
+`uc 1 CHSN2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 VCFG0 1 0 :1:4 
+`uc 1 VCFG1 1 0 :1:5 
+`uc 1 TRIGSEL0 1 0 :1:6 
+`uc 1 TRIGSEL1 1 0 :1:7 
+]
+[s S1828 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CHSN3 1 0 :1:3 
+]
+[s S1831 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 VCFG01 1 0 :1:4 
+]
+[s S1834 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 VCFG11 1 0 :1:5 
+]
+[u S1837 . 1 `S1814 1 . 1 0 `S1819 1 . 1 0 `S1828 1 . 1 0 `S1831 1 . 1 0 `S1834 1 . 1 0 ]
+[v _ADCON1bits `VS1837  1 e 1 @4033 ]
+[s S1711 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_NOT_DONE 1 0 :1:1 
+]
+"13972
+[s S1714 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :5:2 
+]
+[s S1718 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 DONE 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 CHS4 1 0 :1:6 
+]
+[s S1726 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[s S1729 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_DONE 1 0 :1:1 
+]
+[s S1732 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S1735 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GODONE 1 0 :1:1 
+]
+[s S1738 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+]
+[u S1741 . 1 `S1711 1 . 1 0 `S1714 1 . 1 0 `S1718 1 . 1 0 `S1726 1 . 1 0 `S1729 1 . 1 0 `S1732 1 . 1 0 `S1735 1 . 1 0 `S1738 1 . 1 0 ]
+[v _ADCON0bits `VS1741  1 e 1 @4034 ]
+"13975
+[v _ADRES `Vus  1 e 2 @4035 ]
+[s S633 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_T1SYNC 1 0 :1:2 
+]
+"14281
+[s S636 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 RD16 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 SOSCEN 1 0 :1:3 
+`uc 1 T1CKPS 1 0 :2:4 
+`uc 1 TMR1CS 1 0 :2:6 
+]
+[s S643 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+`uc 1 TMR1CS0 1 0 :1:6 
+`uc 1 TMR1CS1 1 0 :1:7 
+]
+[s S649 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 T1OSCEN 1 0 :1:3 
+]
+[s S652 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 T1RD16 1 0 :1:7 
+]
+[u S655 . 1 `S633 1 . 1 0 `S636 1 . 1 0 `S643 1 . 1 0 `S649 1 . 1 0 `S652 1 . 1 0 ]
+[v _T1CONbits `VS655  1 e 1 @4045 ]
+"14284
+[v _TMR1 `Vus  1 e 2 @4046 ]
+[s S443 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+]
+"14367
+[s S445 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_POR 1 0 :1:1 
+]
+[s S448 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_PD 1 0 :1:2 
+]
+[s S451 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_TO 1 0 :1:3 
+]
+[s S454 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 NOT_RI 1 0 :1:4 
+]
+[s S457 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_CM 1 0 :1:5 
+]
+[s S460 . 1 `uc 1 nBOR 1 0 :1:0 
+`uc 1 nPOR 1 0 :1:1 
+`uc 1 nPD 1 0 :1:2 
+`uc 1 nTO 1 0 :1:3 
+`uc 1 nRI 1 0 :1:4 
+`uc 1 nCM 1 0 :1:5 
+`uc 1 SBOREN 1 0 :1:6 
+`uc 1 IPEN 1 0 :1:7 
+]
+[s S469 . 1 `uc 1 BOR 1 0 :1:0 
+`uc 1 POR 1 0 :1:1 
+`uc 1 PD 1 0 :1:2 
+`uc 1 TO 1 0 :1:3 
+`uc 1 RI 1 0 :1:4 
+`uc 1 CM 1 0 :1:5 
+]
+[u S476 . 1 `S443 1 . 1 0 `S445 1 . 1 0 `S448 1 . 1 0 `S451 1 . 1 0 `S454 1 . 1 0 `S457 1 . 1 0 `S460 1 . 1 0 `S469 1 . 1 0 ]
+[v _RCONbits `VS476  1 e 1 @4048 ]
+[s S413 . 1 `uc 1 SCS 1 0 :2:0 
+`uc 1 HFIOFS 1 0 :1:2 
+`uc 1 OSTS 1 0 :1:3 
+`uc 1 IRCF 1 0 :3:4 
+`uc 1 IDLEN 1 0 :1:7 
+]
+"14437
+[s S419 . 1 `uc 1 SCS0 1 0 :1:0 
+`uc 1 SCS1 1 0 :1:1 
+`uc 1 . 1 0 :2:2 
+`uc 1 IRCF0 1 0 :1:4 
+`uc 1 IRCF1 1 0 :1:5 
+`uc 1 IRCF2 1 0 :1:6 
+]
+[u S426 . 1 `S413 1 . 1 0 `S419 1 . 1 0 ]
+[v _OSCCONbits `VS426  1 e 1 @4051 ]
+[s S519 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 NOT_RBPU 1 0 :1:7 
+]
+"14897
+[s S522 . 1 `uc 1 RBIP 1 0 :1:0 
+`uc 1 INT3IP 1 0 :1:1 
+`uc 1 TMR0IP 1 0 :1:2 
+`uc 1 INTEDG3 1 0 :1:3 
+`uc 1 INTEDG2 1 0 :1:4 
+`uc 1 INTEDG1 1 0 :1:5 
+`uc 1 INTEDG0 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+[s S531 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT3P 1 0 :1:1 
+`uc 1 T0IP 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 RBPU 1 0 :1:7 
+]
+[u S537 . 1 `S519 1 . 1 0 `S522 1 . 1 0 `S531 1 . 1 0 ]
+[v _INTCON2bits `VS537  1 e 1 @4081 ]
+[s S843 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"14951
+[s S852 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S861 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S878 . 1 `S843 1 . 1 0 `S852 1 . 1 0 `S861 1 . 1 0 `S852 1 . 1 0 `S861 1 . 1 0 ]
+[v _INTCONbits `VS878  1 e 1 @4082 ]
+"15263
+[v _ADIE `Vb  1 e 0 @31982 ]
+"15265
+[v _ADIF `Vb  1 e 0 @31990 ]
+"15281
+[v _ANSEL0 `Vb  1 e 0 @31464 ]
+"15283
+[v _ANSEL1 `Vb  1 e 0 @31465 ]
+"15285
+[v _ANSEL10 `Vb  1 e 0 @31458 ]
+"15287
+[v _ANSEL11 `Vb  1 e 0 @31459 ]
+"15289
+[v _ANSEL12 `Vb  1 e 0 @31460 ]
+"15291
+[v _ANSEL13 `Vb  1 e 0 @31461 ]
+"15293
+[v _ANSEL14 `Vb  1 e 0 @31462 ]
+"15295
+[v _ANSEL2 `Vb  1 e 0 @31466 ]
+"15297
+[v _ANSEL3 `Vb  1 e 0 @31467 ]
+"15299
+[v _ANSEL4 `Vb  1 e 0 @31468 ]
+"15301
+[v _ANSEL5 `Vb  1 e 0 @31469 ]
+"15303
+[v _ANSEL6 `Vb  1 e 0 @31470 ]
+"15305
+[v _ANSEL7 `Vb  1 e 0 @31471 ]
+"15307
+[v _ANSEL8 `Vb  1 e 0 @31456 ]
+"15309
+[v _ANSEL9 `Vb  1 e 0 @31457 ]
+"17905
+[v _PLLEN `Vb  1 e 0 @31966 ]
+"20001
+[v _TMR1IE `Vb  1 e 0 @31976 ]
+"20003
+[v _TMR1IF `Vb  1 e 0 @31984 ]
+"20033
+[v _TMR3IE `Vb  1 e 0 @32001 ]
+"20035
+[v _TMR3IF `Vb  1 e 0 @32009 ]
+"20059
+[v _TRISA0 `Vb  1 e 0 @31888 ]
+"20061
+[v _TRISA1 `Vb  1 e 0 @31889 ]
+"20073
+[v _TRISB0 `Vb  1 e 0 @31896 ]
+"20075
+[v _TRISB1 `Vb  1 e 0 @31897 ]
+"20077
+[v _TRISB2 `Vb  1 e 0 @31898 ]
+"20079
+[v _TRISB3 `Vb  1 e 0 @31899 ]
+"20081
+[v _TRISB4 `Vb  1 e 0 @31900 ]
+"20083
+[v _TRISB5 `Vb  1 e 0 @31901 ]
+"20085
+[v _TRISB6 `Vb  1 e 0 @31902 ]
+"20087
+[v _TRISB7 `Vb  1 e 0 @31903 ]
+"20099
+[v _TRISC5 `Vb  1 e 0 @31909 ]
+"20103
+[v _TRISC7 `Vb  1 e 0 @31911 ]
+"20113
+[v _TRISD4 `Vb  1 e 0 @31916 ]
+"20115
+[v _TRISD5 `Vb  1 e 0 @31917 ]
+"20119
+[v _TRISD7 `Vb  1 e 0 @31919 ]
+"31 J:\0000 FEDE\16GB\0000 INTERIOR\DE_DISP_HAND\SW\DE_HAND\encoder_pindef.h
+[v _encoder `[1]S1627  1 e 1 0 ]
+"112 J:\0000 FEDE\16GB\0000 INTERIOR\DE_DISP_HAND\SW\DE_HAND\interrupts.c
+[v _aux `uc  1 e 1 0 ]
+"22 J:\0000 FEDE\16GB\0000 INTERIOR\DE_DISP_HAND\SW\DE_HAND\lcd_user_definitions.h
+[v _lcdBuffer `[17]uc  1 e 17 0 ]
+"27 J:\0000 FEDE\16GB\0000 INTERIOR\DE_DISP_HAND\SW\DE_HAND\main.c
+[v _adcResult `i  1 e 2 0 ]
+"22 J:\0000 FEDE\16GB\0000 INTERIOR\DE_DISP_HAND\SW\DE_HAND\pulsadorPinFast_1ms_pindef.h
+[v _PULSADOR_0 `Vb  1 e 0 @31765 ]
+"23
+[v _PULSADOR_1 `Vb  1 e 0 @31773 ]
+"24
+[v _PULSADOR_2 `Vb  1 e 0 @31752 ]
+"25
+[v _PULSADOR_3 `Vb  1 e 0 @31757 ]
+"27
+[v _PULSADOR_4 `Vb  1 e 0 @31750 ]
+"28
+[v _PULSADOR_5 `Vb  1 e 0 @31760 ]
+"30
+[v _PULSADOR_6 `Vb  1 e 0 @31768 ]
+"31
+[v _PULSADOR_7 `Vb  1 e 0 @31769 ]
+"32
+[v _PULSADOR_8 `Vb  1 e 0 @31761 ]
+"51
+[v _pulsPin `[9]S32  1 e 18 0 ]
+[s S1172 . 2 `uc 1 state 1 0 `uc 1 pwmIncEncoder 1 1 ]
+"31 J:\0000 FEDE\16GB\0000 INTERIOR\DE_DISP_HAND\SW\DE_HAND\thisProject.c
+[v _handheld `S1172  1 e 2 0 ]
+"13 J:\0000 FEDE\16GB\0000 INTERIOR\DE_DISP_HAND\SW\DE_HAND\timer_delays.h
+[v _timerDelayConstant `C[3]i  1 e 6 0 ]
+[s S1071 . 5 `uc 1 completeFlg 1 0 :1:0 
+`uc 1 inProcessFlg 1 0 :1:1 
+`uc 1 chComp 1 1 `ui 1 flgs2convert 2 2 `uc 1 nx2convert 1 4 ]
+"15 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\adc18f\20220912 1913\adc18f.c
+[v _adcStruct `S1071  1 e 5 0 ]
+[s S69 . 2 `uc 1 encoderId 1 0 :5:0 
+`uc 1 encoderFlag 1 0 :2:5 
+`uc 1 pulsId 1 1 :2:0 
+`uc 1 pulsFlag 1 1 :1:2 
+]
+"24 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\encoder\20220908 1651\encoder.c
+[v _encoderBuffer `S69  1 e 2 0 ]
+"28
+[v _encoderPuls `[4]S32  1 e 8 0 ]
+"26 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\lcd\20220815 0241\lcd.c
+[v _estadoLcd `uc  1 e 1 0 ]
+"27
+[v _LCD_linAddr `C[2]uc  1 e 2 0 ]
+[s S1095 . 10 `uc 1 flg 1 0 `*.0uc 1 nxr 2 1 `*.0uc 1 nxw 2 3 `*.0uc 1 bas 2 5 `uc 1 nr 1 7 `uc 1 nw 1 8 `uc 1 bufsiz 1 9 ]
+"30
+[v _lcdFile `S1095  1 e 10 0 ]
+[s S94 . 6 `uc 1 visibility 1 0 :1:0 
+`uc 1 cursorVisibility 1 0 :1:1 
+`uc 1 cursorBlink 1 0 :1:2 
+`uc 1 cursorDirection 1 0 :1:3 
+`uc 1 shift 1 0 :1:4 
+`uc 1 visibility_refresh 1 0 :1:5 
+`uc 1 cursorVisibility_refresh 1 0 :1:6 
+`uc 1 cursorBlink_refresh 1 0 :1:7 
+`uc 1 cursorDirection_refresh 1 1 :1:0 
+`uc 1 shift_refresh 1 1 :1:1 
+`uc 1 display_refresh 1 1 :1:2 
+`uc 1 cursor_position_refresh 1 1 :1:3 
+`ui 1 cursor_position_x 2 2 `ui 1 cursor_position_y 2 4 ]
+"40
+[v _lcdSettings `S94  1 e 6 0 ]
+"81
+[v _lcdStateIndex `C[7]uc  1 e 7 0 ]
+"97
+[v _lcdStateTable `C[17]S1303  1 e 51 0 ]
+[s S1596 . 1 `uc 1 pulsId 1 0 :5:0 
+`uc 1 flag 1 0 :1:5 
+]
+"17 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\pulsadorPinFast_1ms\20220815 0221\pulsadorPinFast_1ms.c
+[v _pulsPinBuffer `S1596  1 e 1 0 ]
+[s S86 . 6 `i 1 periodAccum 2 0 `i 1 tonAccum 2 2 `i 1 tonResetVal 2 4 ]
+"14 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\pwm_sw\20220831 0300\pwm_sw.c
+[v _pwm `S86  1 e 6 0 ]
+"13 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\timer\20220922 2300\timer.c
+[v _timerMem `[3]S176  1 e 9 0 ]
+"32 J:\0000 FEDE\16GB\0000 INTERIOR\DE_DISP_HAND\SW\DE_HAND\main.c
+[v _main `(v  1 e 0 0 ]
+{
+"89
+} 0
+"28 J:\0000 FEDE\16GB\0000 INTERIOR\DE_DISP_HAND\SW\DE_HAND\system.c
+[v _systemInit `(v  1 e 0 0 ]
+{
+"79
+} 0
+"80 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\adc18f\20220912 1913\adc18f.c
+[v _adcSetup_18F46K80 `(v  1 e 0 0 ]
+{
+"112
+} 0
+"42 J:\0000 FEDE\16GB\0000 INTERIOR\DE_DISP_HAND\SW\DE_HAND\thisProject.c
+[v _thisProjectInit `(v  1 e 0 0 ]
+{
+"52
+} 0
+"304 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\lcd\20220815 0241\lcd.c
+[v _lcdFsmInit `(v  1 e 0 0 ]
+{
+"310
+} 0
+"22 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\pwm_sw\20220831 0300\pwm_sw.c
+[v _pwm_sw_init `(v  1 e 0 0 ]
+{
+"25
+} 0
+"65 J:\0000 FEDE\16GB\0000 INTERIOR\DE_DISP_HAND\SW\DE_HAND\thisProject.c
+[v _thisProject_driver `(v  1 e 0 0 ]
+{
+"67
+} 0
+"23 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\adc18f\20220912 1913\adc18f.c
+[v _adcDriver `(v  1 e 0 0 ]
+{
+"24
+[v adcDriver@ch2cnv `uc  1 a 1 8 ]
+"43
+} 0
+"50
+[v _getConv `(i  1 e 2 0 ]
+{
+"54
+} 0
+"118 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\stdio\20220815 0221\stdio.c
+[v _fseek `(v  1 e 0 0 ]
+{
+[v fseek@fp `*.0S1095  1 p 2 0 ]
+[v fseek@offset `i  1 p 2 2 ]
+[v fseek@mode `i  1 p 2 4 ]
+"162
+} 0
+"177
+[v _fprintf `(v  1 e 0 0 ]
+{
+"179
+[v fprintf@str `[12]uc  1 a 12 52 ]
+"182
+[v fprintf@lval `l  1 a 4 67 ]
+"183
+[v fprintf@dval `d  1 a 3 64 ]
+"178
+[v fprintf@ap `[1]*.sv  1 a 2 81 ]
+"186
+[v fprintf@v `*.0uc  1 a 2 79 ]
+"180
+[v fprintf@p `*.cuc  1 a 2 77 ]
+"181
+[v fprintf@ival `i  1 a 2 75 ]
+"180
+[v fprintf@sval `*.suc  1 a 2 73 ]
+"184
+[v fprintf@uval `ui  1 a 2 71 ]
+"177
+[v fprintf@fp `*.0S1095  1 p 2 45 ]
+[v fprintf@fmt `*.cuc  1 p 2 47 ]
+"241
+} 0
+"51
+[v _fputc `(uc  1 e 1 0 ]
+{
+[v fputc@c `uc  1 p 1 0 ]
+[v fputc@stream `*.0S1095  1 p 2 1 ]
+"62
+} 0
+"255
+[v _intToStr `(*.Muc  1 e 2 0 ]
+{
+[v intToStr@num `i  1 p 2 9 ]
+[v intToStr@str `*.0uc  1 p 2 11 ]
+[v intToStr@strLen `uc  1 p 1 13 ]
+"272
+} 0
+"279
+[v _longToStr `(*.Muc  1 e 2 0 ]
+{
+[v longToStr@num `l  1 p 4 15 ]
+[v longToStr@str `*.0uc  1 p 2 19 ]
+[v longToStr@strLen `uc  1 p 1 21 ]
+"294
+} 0
+"320
+[v _uToStr `(*.Muc  1 e 2 0 ]
+{
+[v uToStr@num `ui  1 p 2 8 ]
+[v uToStr@str `*.0uc  1 p 2 10 ]
+[v uToStr@strLen `uc  1 p 1 12 ]
+"330
+} 0
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\aldiv.c
+[v ___aldiv `(l  1 e 4 0 ]
+{
+"11
+[v ___aldiv@quotient `l  1 a 4 11 ]
+"12
+[v ___aldiv@sign `uc  1 a 1 10 ]
+[v ___aldiv@counter `uc  1 a 1 9 ]
+"10
+[v ___aldiv@dividend `l  1 p 4 0 ]
+[v ___aldiv@divisor `l  1 p 4 4 ]
+"42
+} 0
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\almod.c
+[v ___almod `(l  1 e 4 0 ]
+{
+"11
+[v ___almod@sign `uc  1 a 1 10 ]
+[v ___almod@counter `uc  1 a 1 9 ]
+"10
+[v ___almod@dividend `l  1 p 4 0 ]
+[v ___almod@divisor `l  1 p 4 4 ]
+"35
+} 0
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\awdiv.c
+[v ___awdiv `(i  1 e 2 0 ]
+{
+"11
+[v ___awdiv@quotient `i  1 a 2 7 ]
+"12
+[v ___awdiv@sign `uc  1 a 1 6 ]
+[v ___awdiv@counter `uc  1 a 1 5 ]
+"10
+[v ___awdiv@dividend `i  1 p 2 0 ]
+[v ___awdiv@divisor `i  1 p 2 2 ]
+"42
+} 0
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\awmod.c
+[v ___awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign `uc  1 a 1 6 ]
+[v ___awmod@counter `uc  1 a 1 5 ]
+"10
+[v ___awmod@dividend `i  1 p 2 0 ]
+[v ___awmod@divisor `i  1 p 2 2 ]
+"35
+} 0
+"33 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\awtoft.c
+[v ___awtoft `(f  1 e 3 0 ]
+{
+"34
+[v ___awtoft@sign `uc  1 a 1 12 ]
+"33
+[v ___awtoft@c `i  1 p 2 8 ]
+"42
+} 0
+"52 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\ftmul.c
+[v ___ftmul `(f  1 e 3 0 ]
+{
+"54
+[v ___ftmul@f3_as_product `um  1 a 3 25 ]
+"53
+[v ___ftmul@sign `uc  1 a 1 29 ]
+[v ___ftmul@cntr `uc  1 a 1 28 ]
+[v ___ftmul@exp `uc  1 a 1 24 ]
+"52
+[v ___ftmul@f1 `f  1 p 3 13 ]
+[v ___ftmul@f2 `f  1 p 3 16 ]
+"84
+} 0
+"63 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\float.c
+[v ___ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg `um  1 p 3 0 ]
+[v ___ftpack@exp `uc  1 p 1 3 ]
+[v ___ftpack@sign `uc  1 p 1 4 ]
+"86
+} 0
+"45 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\fttol.c
+[v ___fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval `ul  1 a 4 40 ]
+"46
+[v ___fttol@exp1 `uc  1 a 1 44 ]
+[v ___fttol@sign1 `uc  1 a 1 39 ]
+"45
+[v ___fttol@f1 `f  1 p 3 30 ]
+"73
+} 0
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lwdiv.c
+[v ___lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient `ui  1 a 2 5 ]
+"12
+[v ___lwdiv@counter `uc  1 a 1 7 ]
+"10
+[v ___lwdiv@dividend `ui  1 p 2 0 ]
+[v ___lwdiv@divisor `ui  1 p 2 2 ]
+"31
+} 0
+"10 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\sources\lwmod.c
+[v ___lwmod `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwmod@counter `uc  1 a 1 5 ]
+"10
+[v ___lwmod@dividend `ui  1 p 2 0 ]
+[v ___lwmod@divisor `ui  1 p 2 2 ]
+"26
+} 0
+"36 J:\0000 FEDE\16GB\0000 INTERIOR\DE_DISP_HAND\SW\DE_HAND\interrupts.c
+[v _isr0 `I(v  1 e 0 0 ]
+{
+"42
+} 0
+"53
+[v _isr_timer1_low_priority `(v  1 e 0 0 ]
+{
+"106
+} 0
+"114
+[v _isr_timer3_low_priority `(v  1 e 0 0 ]
+{
+"126
+} 0
+"61 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\adc18f\20220912 1913\adc18f.c
+[v _isr_adc `(v  1 e 0 0 ]
+{
+"66
+} 0
+"18 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\timer\20220922 2300\timer.c
+[v _timerDriver `(v  1 e 0 0 ]
+{
+[v timerDriver@i `uc  1 p 1 0 ]
+"29
+} 0
+"289 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\lcd\20220815 0241\lcd.c
+[v _lcdFsmParser `(v  1 e 0 0 ]
+{
+"290
+[v lcdFsmParser@event `uc  1 a 1 17 ]
+"297
+} 0
+"57 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\encoder\20220908 1651\encoder.c
+[v _encoder_driver `(v  1 e 0 0 ]
+{
+[v encoder_driver@e `uc  1 p 1 4 ]
+"137
+} 0
+"37 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\pulsadorPinFast_1ms\20220815 0221\pulsadorPinFast_1ms.c
+[v _puls_dc_driver `(v  1 e 0 0 ]
+{
+[v puls_dc_driver@pi `uc  1 p 1 0 ]
+[v puls_dc_driver@flanco `uc  1 p 1 1 ]
+[v puls_dc_driver@pulsCurrentState `uc  1 p 1 2 ]
+"50
+} 0
+"29 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\pwm_sw\20220831 0300\pwm_sw.c
+[v _pwm_sw_driver `(v  1 e 0 0 ]
+{
+"40
+} 0
+"207 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\lcd\20220815 0241\lcd.c
+[v _lcdRunAction `(v  1 e 0 0 ]
+{
+[v lcdRunAction@action `uc  1 p 1 13 ]
+"221
+} 0
+"130
+[v _lcdAction000_set_data_length `(v  1 e 0 0 ]
+{
+"133
+} 0
+"136
+[v _lcdAction001_clear_display `(v  1 e 0 0 ]
+{
+"139
+} 0
+"142
+[v _lcdAction002_set_entry_mode `(v  1 e 0 0 ]
+{
+"150
+} 0
+"153
+[v _lcdAction003_set_visibility `(v  1 e 0 0 ]
+{
+"162
+} 0
+"165
+[v _lcdAction004_rewind `(v  1 e 0 0 ]
+{
+"171
+} 0
+"174
+[v _lcdAction005_send_character `(v  1 e 0 0 ]
+{
+"175
+[v lcdAction005_send_character@c `uc  1 a 1 5 ]
+"179
+} 0
+"182
+[v _lcdAction006_init_tmr_30ms `(v  1 e 0 0 ]
+{
+"184
+} 0
+"187
+[v _lcdAction007_lcd_second_line `(v  1 e 0 0 ]
+{
+"189
+} 0
+"192
+[v _lcdAction008_set_cursor_position `(v  1 e 0 0 ]
+{
+"200
+} 0
+"317
+[v _lcdNibbleSend `(v  1 e 0 0 ]
+{
+[v lcdNibbleSend@mode `uc  1 p 1 0 ]
+[v lcdNibbleSend@lowerNibble `uc  1 p 1 1 ]
+"325
+} 0
+"228
+[v _lcdGetEvent `(uc  1 e 1 0 ]
+{
+"229
+[v lcdGetEvent@event `uc  1 a 1 15 ]
+"282
+} 0
+"74 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\stdio\20220815 0221\stdio.c
+[v _fgetc `(uc  1 e 1 0 ]
+{
+[v fgetc@stream `*.0S1095  1 p 2 0 ]
+"85
+} 0
+"89
+[v _unget `(v  1 e 0 0 ]
+{
+[v unget@stream `*.0S1095  1 p 2 0 ]
+"92
+} 0
+"39 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\encoder\20220908 1651\encoder.c
+[v _encoderPin_driver `(v  1 e 0 0 ]
+{
+[v encoderPin_driver@pi `uc  1 p 1 0 ]
+[v encoderPin_driver@flanco `uc  1 p 1 1 ]
+[v encoderPin_driver@pulsCurrentState `uc  1 p 1 2 ]
+"52
+} 0

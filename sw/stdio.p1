@@ -1,0 +1,858 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[s S1 `uc 1 `*uc 1 `*uc 1 `*uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S1 . flg nxr nxw bas nr nw bufsiz ]
+[c E1 0 1 2 .. ]
+[n E1 e_mode_fseek SEEK_END SEEK_CUR SEEK_SET  ]
+"34 C:\Program Files (x86)\HI-TECH Software\PICC-18\9.80\include\stdarg.h
+[v ___va_start `(*v ~T0 0 ef ]
+[p i ___va_start ]
+"37
+[v ___va_arg `(*v ~T0 0 ev`*v ]
+[p i ___va_arg ]
+"76 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\stdio\20220815 0221\stdio.h
+[v _intToStr `(*uc ~T0 0 ef3`i`*uc`uc ]
+"77
+[v _longToStr `(*uc ~T0 0 ef3`l`*uc`uc ]
+"79
+[v _uToStr `(*uc ~T0 0 ef3`ui`*uc`uc ]
+[; ;stdio.h: 23: enum e_mode_fseek{SEEK_END,SEEK_CUR,SEEK_SET};
+[; ;stdio.h: 45: typedef struct
+[; ;stdio.h: 46: {
+[; ;stdio.h: 47: char flg;
+[; ;stdio.h: 48: char *nxr;
+[; ;stdio.h: 49: char *nxw;
+[; ;stdio.h: 50: char *bas;
+[; ;stdio.h: 51: char nr;
+[; ;stdio.h: 52: char nw;
+[; ;stdio.h: 53: char bufsiz;
+[; ;stdio.h: 54: }FILE;
+[; ;stdio.h: 65: char fputc(char c, FILE *stream);
+[; ;stdio.h: 66: char fgetc(FILE *stream);
+[; ;stdio.h: 67: void fseek(FILE *fp,int offset,int mode);
+[; ;stdio.h: 68: void unget(FILE *stream);
+[; ;stdio.h: 73: void fprintf(FILE *fp,char *fmt,...);
+[; ;stdio.h: 74: void fprinti(FILE *fp,char *str);
+[; ;stdio.h: 76: char *intToStr(int num,char *str,char strLen);
+[; ;stdio.h: 77: char *longToStr(long num,char *str,char strLen);
+[; ;stdio.h: 78: void ucharToStr(unsigned char num,char *str,char strLen);
+[; ;stdio.h: 79: char *uToStr(unsigned int num,char *str,char strLen);
+[; ;string.h: 4: typedef int ptrdiff_t;
+[; ;string.h: 5: typedef unsigned size_t;
+[; ;string.h: 6: typedef unsigned short wchar_t;
+[; ;string.h: 9: extern int errno;
+[; ;string.h: 22: extern void * memcpy(void *, const void *, size_t);
+[; ;string.h: 23: extern void * memmove(void *, const void *, size_t);
+[; ;string.h: 24: extern void * memset(void *, int, size_t);
+[; ;string.h: 35: extern char * strcat(char *, const char *);
+[; ;string.h: 36: extern char * strcpy(char *, const char *);
+[; ;string.h: 37: extern char * strncat(char *, const char *, size_t);
+[; ;string.h: 38: extern char * strncpy(char *, const char *, size_t);
+[; ;string.h: 39: extern char * strdup(const char *);
+[; ;string.h: 40: extern char * strtok(char *, const char *);
+[; ;string.h: 43: extern int memcmp(const void *, const void *, size_t);
+[; ;string.h: 44: extern int strcmp(const char *, const char *);
+[; ;string.h: 45: extern int stricmp(const char *, const char *);
+[; ;string.h: 46: extern int strncmp(const char *, const char *, size_t);
+[; ;string.h: 47: extern int strnicmp(const char *, const char *, size_t);
+[; ;string.h: 48: extern void * memchr(const void *, int, size_t);
+[; ;string.h: 49: extern size_t strcspn(const char *, const char *);
+[; ;string.h: 50: extern char * strpbrk(const char *, const char *);
+[; ;string.h: 51: extern size_t strspn(const char *, const char *);
+[; ;string.h: 52: extern char * strstr(const char *, const char *);
+[; ;string.h: 53: extern char * stristr(const char *, const char *);
+[; ;string.h: 54: extern char * strerror(int);
+[; ;string.h: 55: extern size_t strlen(const char *);
+[; ;string.h: 56: extern char * strchr(const char *, int);
+[; ;string.h: 57: extern char * strichr(const char *, int);
+[; ;string.h: 58: extern char * strrchr(const char *, int);
+[; ;string.h: 59: extern char * strrichr(const char *, int);
+[; ;stdarg.h: 31: typedef void * va_list[1];
+[; ;stdarg.h: 34: extern void * __va_start(void);
+[; ;stdarg.h: 37: extern void * __va_arg(void *, ...);
+"51 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\stdio\20220815 0221\stdio.c
+[v _fputc `(uc ~T0 1 ef2`uc`*S1 ]
+{
+[; ;stdio.c: 50: char fputc(char c,FILE *stream)
+[; ;stdio.c: 51: {
+[e :U _fputc ]
+[v _c `uc ~T0 1 r1 ]
+[v _stream `*S1 ~T0 1 r2 ]
+[f ]
+[; ;stdio.c: 52: if(stream->nw==0)
+"52
+[e $ ! == -> . *U _stream 5 `i -> 0 `i 3  ]
+[; ;stdio.c: 53: {
+"53
+{
+[; ;stdio.c: 54: stream->flg|=(1<<3);
+"54
+[e =| . *U _stream 0 -> << -> 1 `i -> 3 `i `uc ]
+[; ;stdio.c: 55: return (-1);
+"55
+[e ) -> -U -> 1 `i `uc ]
+[e $UE 2  ]
+"56
+}
+[; ;stdio.c: 56: }
+[e $U 4  ]
+"57
+[e :U 3 ]
+[; ;stdio.c: 57: else
+[; ;stdio.c: 58: {
+"58
+{
+[; ;stdio.c: 59: --stream->nw;
+"59
+[e =- . *U _stream 5 -> -> 1 `i `uc ]
+[; ;stdio.c: 60: return *((stream->nxw)++)=c;
+"60
+[e ) = *U ++ . *U _stream 2 * -> -> 1 `i `x -> -> # *U . *U _stream 2 `i `x _c ]
+[e $UE 2  ]
+"61
+}
+[e :U 4 ]
+[; ;stdio.c: 61: }
+[; ;stdio.c: 62: }
+"62
+[e :UE 2 ]
+}
+"74
+[v _fgetc `(uc ~T0 1 ef1`*S1 ]
+{
+[; ;stdio.c: 73: char fgetc(FILE *stream)
+[; ;stdio.c: 74: {
+[e :U _fgetc ]
+[v _stream `*S1 ~T0 1 r1 ]
+[f ]
+[; ;stdio.c: 75: if(stream->nr==0)
+"75
+[e $ ! == -> . *U _stream 4 `i -> 0 `i 6  ]
+[; ;stdio.c: 76: {
+"76
+{
+[; ;stdio.c: 77: stream->flg|=(1<<3);
+"77
+[e =| . *U _stream 0 -> << -> 1 `i -> 3 `i `uc ]
+[; ;stdio.c: 78: return (-1);
+"78
+[e ) -> -U -> 1 `i `uc ]
+[e $UE 5  ]
+"79
+}
+[; ;stdio.c: 79: }
+[e $U 7  ]
+"80
+[e :U 6 ]
+[; ;stdio.c: 80: else
+[; ;stdio.c: 81: {
+"81
+{
+[; ;stdio.c: 82: --(stream->nr);
+"82
+[e =- . *U _stream 4 -> -> 1 `i `uc ]
+[; ;stdio.c: 83: return *((stream->nxr)++);
+"83
+[e ) *U ++ . *U _stream 1 * -> -> 1 `i `x -> -> # *U . *U _stream 1 `i `x ]
+[e $UE 5  ]
+"84
+}
+[e :U 7 ]
+[; ;stdio.c: 84: }
+[; ;stdio.c: 85: }
+"85
+[e :UE 5 ]
+}
+"89
+[v _unget `(v ~T0 1 ef1`*S1 ]
+{
+[; ;stdio.c: 88: void unget(FILE *stream)
+[; ;stdio.c: 89: {
+[e :U _unget ]
+[v _stream `*S1 ~T0 1 r1 ]
+[f ]
+[; ;stdio.c: 90: if((stream->nr++)==0) stream->flg&=~(1<<3);
+"90
+[e $ ! == -> ++ . *U _stream 4 -> -> 1 `i `uc `i -> 0 `i 9  ]
+[e =& . *U _stream 0 -> ~ << -> 1 `i -> 3 `i `uc ]
+[e :U 9 ]
+[; ;stdio.c: 91: --(stream->nxr);
+"91
+[e =- . *U _stream 1 * -> -> 1 `i `x -> -> # *U . *U _stream 1 `i `x ]
+[; ;stdio.c: 92: }
+"92
+[e :UE 8 ]
+}
+"22 J:\0000 FEDE\16GB\0000 INTERIOR\DE_DISP_HAND\SW\DE_HAND\lcd_user_definitions.h
+[v _lcdBuffer `uc ~T0 + * -> 2 `i -> 8 `i -> 1 `i e ]
+[i _lcdBuffer
+:U ..
+-> -> 49 `ui `uc
+-> -> 50 `ui `uc
+-> -> 51 `ui `uc
+-> -> 95 `ui `uc
+-> -> 99 `ui `uc
+-> -> 95 `ui `uc
+-> -> 100 `ui `uc
+-> -> 120 `ui `uc
+-> -> 10 `ui `uc
+"23
+-> -> 36 `ui `uc
+-> -> 46 `ui `uc
+-> -> 63 `ui `uc
+-> -> 46 `ui `uc
+-> -> 43 `ui `uc
+-> -> 46 `ui `uc
+-> -> 42 `ui `uc
+-> -> 122 `ui `uc
+..
+]
+[; ;lcd_user_definitions.h: 22: char lcdBuffer[(2*8+1)]={'1','2','3','_','c','_','d','x','\n',
+[; ;lcd_user_definitions.h: 23: '$','.','?','.','+','.','*','z'};
+[; ;lcd_lib.h: 33: void lcdFsmInit(void);
+[; ;lcd_lib.h: 34: void lcdFsmParser(void);
+[; ;lcd_lib.h: 35: void lcdNibbleSend(char mode,char command);
+[; ;lcd_lib.h: 46: enum e_lcdEvent
+[; ;lcd_lib.h: 47: {
+[; ;lcd_lib.h: 48: LCD_EVENT_UNFINISHED,
+[; ;lcd_lib.h: 49: LCD_EVENT_TIMEOUT_30MS,
+[; ;lcd_lib.h: 50: LCD_EVENT_TIMEOUT_30MS_SKIP_DISPLAY_REFRESH,
+[; ;lcd_lib.h: 51: LCD_EVENT_REFRESH_FINISHED,
+[; ;lcd_lib.h: 52: LCD_EVENT_FIRST_LINE_FINISHED,
+[; ;lcd_lib.h: 53: LCD_EVENT_TABLE_END
+[; ;lcd_lib.h: 54: };
+[; ;lcd_lib.h: 60: enum e_lcdState
+[; ;lcd_lib.h: 61: {
+[; ;lcd_lib.h: 62: LCD_STATE_WAIT_TO_SET_DATA_LENGTH,
+[; ;lcd_lib.h: 63: LCD_STATE_WAIT_TO_CLEAR_DISPLAY,
+[; ;lcd_lib.h: 64: LCD_STATE_WAIT_TO_SET_ENTRY_MODE,
+[; ;lcd_lib.h: 65: LCD_STATE_WAIT_TO_SET_VISIBILITY,
+[; ;lcd_lib.h: 66: LCD_STATE_WAIT_FOR_REFRESH,
+[; ;lcd_lib.h: 67: LCD_STATE_COMMAND_FIRST_LINE,
+[; ;lcd_lib.h: 68: LCD_STATE_COMMAND_SECOND_LINE,
+[; ;lcd_lib.h: 69: LCD_STATE_CANT_STATES
+[; ;lcd_lib.h: 70: };
+[; ;lcd_lib.h: 76: enum e_lcdAction
+[; ;lcd_lib.h: 77: {
+[; ;lcd_lib.h: 78: LCD_ACTION_SET_DATA_LENGTH,
+[; ;lcd_lib.h: 79: LCD_ACTION_CLEAR_DISPLAY,
+[; ;lcd_lib.h: 80: LCD_ACTION_SET_ENTRY_MODE,
+[; ;lcd_lib.h: 81: LCD_ACTION_SET_VISIBILITY,
+[; ;lcd_lib.h: 82: LCD_ACTION_REWIND,
+[; ;lcd_lib.h: 83: LCD_ACTION_SEND_CHARACTER,
+[; ;lcd_lib.h: 84: LCD_ACTION_INIT_TMR_30MS,
+[; ;lcd_lib.h: 85: LCD_ACTION_START_LCD_SECOND_LINE,
+[; ;lcd_lib.h: 86: LCD_ACTION_SET_CURSOR_POSITION,
+[; ;lcd_lib.h: 87: LCD_ACTION_DO_NOTHING
+[; ;lcd_lib.h: 88: };
+[; ;lcd_lib.h: 109: typedef const struct t_lcdTransition
+[; ;lcd_lib.h: 111: {
+[; ;lcd_lib.h: 112: char event;
+[; ;lcd_lib.h: 113: char action;
+[; ;lcd_lib.h: 114: char nextState;
+[; ;lcd_lib.h: 115: }t_lcdState;
+[; ;lcd_lib.h: 117: typedef struct
+[; ;lcd_lib.h: 118: {
+[; ;lcd_lib.h: 119: unsigned visibility:1;
+[; ;lcd_lib.h: 120: unsigned cursorVisibility:1;
+[; ;lcd_lib.h: 121: unsigned cursorBlink:1;
+[; ;lcd_lib.h: 122: unsigned cursorDirection:1;
+[; ;lcd_lib.h: 123: unsigned shift:1;
+[; ;lcd_lib.h: 124: unsigned visibility_refresh:1;
+[; ;lcd_lib.h: 125: unsigned cursorVisibility_refresh:1;
+[; ;lcd_lib.h: 126: unsigned cursorBlink_refresh:1;
+[; ;lcd_lib.h: 127: unsigned cursorDirection_refresh:1;
+[; ;lcd_lib.h: 128: unsigned shift_refresh:1;
+[; ;lcd_lib.h: 129: unsigned display_refresh:1;
+[; ;lcd_lib.h: 131: unsigned cursor_position_refresh:1;
+[; ;lcd_lib.h: 132: unsigned cursor_position_x;
+[; ;lcd_lib.h: 133: unsigned cursor_position_y;
+[; ;lcd_lib.h: 134: }t_lcdSettings;
+[; ;lcd_lib.h: 205: extern char lcdBuffer[(2*8+1)];
+[; ;lcd_lib.h: 206: extern FILE lcdFile;
+[; ;lcd_lib.h: 207: extern t_lcdSettings lcdSettings;
+"118 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\stdio\20220815 0221\stdio.c
+[v _fseek `(v ~T0 1 ef3`*S1`i`i ]
+{
+[; ;stdio.c: 117: void fseek(FILE *fp,int offset,int mode)
+[; ;stdio.c: 118: {
+[e :U _fseek ]
+[v _fp `*S1 ~T0 1 r1 ]
+[v _offset `i ~T0 1 r2 ]
+[v _mode `i ~T0 1 r3 ]
+[f ]
+[; ;stdio.c: 119: fp->flg&=~(1<<3);
+"119
+[e =& . *U _fp 0 -> ~ << -> 1 `i -> 3 `i `uc ]
+[; ;stdio.c: 120: switch(mode)
+"120
+[e $U 14  ]
+[; ;stdio.c: 121: {
+"121
+{
+[; ;stdio.c: 122: case SEEK_SET:
+"122
+[e :U 15 ]
+[; ;stdio.c: 123: if(fp->flg&(1<<0))
+"123
+[e $ ! != & -> . *U _fp 0 `i << -> 1 `i -> 0 `i -> 0 `i 16  ]
+[; ;stdio.c: 124: {
+"124
+{
+[; ;stdio.c: 125: (fp->nxr)=fp->bas;
+"125
+[e = . *U _fp 1 . *U _fp 3 ]
+[; ;stdio.c: 126: (fp->nr)=fp->bufsiz;
+"126
+[e = . *U _fp 4 . *U _fp 6 ]
+"127
+}
+[e :U 16 ]
+[; ;stdio.c: 127: }
+[; ;stdio.c: 128: if(fp->flg&(1<<1))
+"128
+[e $ ! != & -> . *U _fp 0 `i << -> 1 `i -> 1 `i -> 0 `i 17  ]
+[; ;stdio.c: 129: {
+"129
+{
+[; ;stdio.c: 130: (fp->nxw)=fp->bas;
+"130
+[e = . *U _fp 2 . *U _fp 3 ]
+[; ;stdio.c: 131: (fp->nw)=fp->bufsiz;
+"131
+[e = . *U _fp 5 . *U _fp 6 ]
+"132
+}
+[e :U 17 ]
+[; ;stdio.c: 132: }
+[; ;stdio.c: 133: break;
+"133
+[e $U 13  ]
+[; ;stdio.c: 134: case SEEK_END:
+"134
+[e :U 18 ]
+[; ;stdio.c: 135: if(fp->flg&(1<<0))
+"135
+[e $ ! != & -> . *U _fp 0 `i << -> 1 `i -> 0 `i -> 0 `i 19  ]
+[; ;stdio.c: 136: {
+"136
+{
+[; ;stdio.c: 137: (fp->nxr)=fp->bas+fp->bufsiz;
+"137
+[e = . *U _fp 1 + . *U _fp 3 * -> . *U _fp 6 `ux -> -> # *U . *U _fp 3 `ui `ux ]
+[; ;stdio.c: 138: (fp->nw)=0;
+"138
+[e = . *U _fp 5 -> -> 0 `i `uc ]
+"139
+}
+[e :U 19 ]
+[; ;stdio.c: 139: }
+[; ;stdio.c: 140: if(fp->flg&(1<<1))
+"140
+[e $ ! != & -> . *U _fp 0 `i << -> 1 `i -> 1 `i -> 0 `i 20  ]
+[; ;stdio.c: 141: {
+"141
+{
+[; ;stdio.c: 142: (fp->nxw)=fp->bas+fp->bufsiz;
+"142
+[e = . *U _fp 2 + . *U _fp 3 * -> . *U _fp 6 `ux -> -> # *U . *U _fp 3 `ui `ux ]
+[; ;stdio.c: 143: (fp->nw)=0;
+"143
+[e = . *U _fp 5 -> -> 0 `i `uc ]
+"144
+}
+[e :U 20 ]
+[; ;stdio.c: 144: }
+[; ;stdio.c: 145: break;
+"145
+[e $U 13  ]
+[; ;stdio.c: 146: case SEEK_CUR:
+"146
+[e :U 21 ]
+[; ;stdio.c: 147: if(fp->flg&(1<<0))
+"147
+[e $ ! != & -> . *U _fp 0 `i << -> 1 `i -> 0 `i -> 0 `i 22  ]
+[; ;stdio.c: 148: {
+"148
+{
+[; ;stdio.c: 149: (fp->nxr)+=offset;
+"149
+[e =+ . *U _fp 1 * -> _offset `x -> -> # *U . *U _fp 1 `i `x ]
+[; ;stdio.c: 150: (fp->nw)-=offset;
+"150
+[e =- . *U _fp 5 -> _offset `uc ]
+"151
+}
+[e :U 22 ]
+[; ;stdio.c: 151: }
+[; ;stdio.c: 152: if(fp->flg&(1<<1))
+"152
+[e $ ! != & -> . *U _fp 0 `i << -> 1 `i -> 1 `i -> 0 `i 23  ]
+[; ;stdio.c: 153: {
+"153
+{
+[; ;stdio.c: 154: (fp->nxw)=(fp->nxw)+offset;
+"154
+[e = . *U _fp 2 + . *U _fp 2 * -> _offset `x -> -> # *U . *U _fp 2 `i `x ]
+[; ;stdio.c: 155: (fp->nw)-=offset;
+"155
+[e =- . *U _fp 5 -> _offset `uc ]
+"159
+}
+[e :U 23 ]
+[; ;stdio.c: 159: }
+[; ;stdio.c: 160: break;
+"160
+[e $U 13  ]
+"161
+}
+[; ;stdio.c: 161: }
+[e $U 13  ]
+"120
+[e :U 14 ]
+[e [\ _mode , $ -> . `E1 2 `i 15
+ , $ -> . `E1 0 `i 18
+ , $ -> . `E1 1 `i 21
+ 13 ]
+"161
+[e :U 13 ]
+[; ;stdio.c: 162: }
+"162
+[e :UE 12 ]
+}
+"177
+[v _fprintf `(v ~T0 1 e1v`*S1`*uc ]
+{
+[; ;stdio.c: 176: void fprintf(FILE *fp,char *fmt,...)
+[; ;stdio.c: 177: {
+[e :U _fprintf ]
+[v _fp `*S1 ~T0 1 r1 ]
+[v _fmt `*uc ~T0 1 r0 ]
+[f ]
+"178
+[v _ap `*v ~T0 -> -> 1 `i `ux a ]
+"179
+[v _str `uc ~T0 -> 12 `i a ]
+"180
+[v _p `*uc ~T0 1 a ]
+[v _sval `*uc ~T0 1 a ]
+"181
+[v _ival `i ~T0 1 a ]
+"182
+[v _lval `l ~T0 1 a ]
+"183
+[v _dval `d ~T0 1 a ]
+"184
+[v _uval `ui ~T0 1 a ]
+"186
+[v _v `*uc ~T0 1 a ]
+[; ;stdio.c: 178: va_list ap;
+[; ;stdio.c: 179: char str[12];
+[; ;stdio.c: 180: char *p,*sval;
+[; ;stdio.c: 181: int ival;
+[; ;stdio.c: 182: long int lval;
+[; ;stdio.c: 183: double dval;
+[; ;stdio.c: 184: unsigned uval;
+[; ;stdio.c: 186: char *v;
+[; ;stdio.c: 188: *ap = __va_start();
+"188
+[e = *U &U _ap ( ___va_start ..  ]
+[; ;stdio.c: 189: for(p=fmt;*p;p++)
+"189
+{
+[e = _p _fmt ]
+[e $U 28  ]
+"190
+[e :U 25 ]
+[; ;stdio.c: 190: {
+{
+[; ;stdio.c: 191: if(*p!='%')
+"191
+[e $ ! != -> *U _p `ui -> 37 `ui 29  ]
+[; ;stdio.c: 192: {
+"192
+{
+[; ;stdio.c: 193: (void)fputc(*p,fp);
+"193
+[e ( _fputc (2 , *U _p _fp ]
+[; ;stdio.c: 194: continue;
+"194
+[e $U 27  ]
+"195
+}
+[e :U 29 ]
+[; ;stdio.c: 195: }
+[; ;stdio.c: 196: switch(*++p)
+"196
+[e $U 31  ]
+[; ;stdio.c: 197: {
+"197
+{
+[; ;stdio.c: 198: case 'd':
+"198
+[e :U 32 ]
+"199
+[e :U 33 ]
+[; ;stdio.c: 199: case 'i':
+[; ;stdio.c: 200: ival=(*(int *)__va_arg((*(int **)ap), (int)0));
+"200
+[e = _ival *U -> ( ___va_arg , (. -> *U -> &U _ap `**i `*v -> 0 `i `*i ]
+[; ;stdio.c: 201: v=intToStr(ival,str,12);
+"201
+[e = _v ( _intToStr (3 , , _ival &U _str -> -> 12 `i `uc ]
+[; ;stdio.c: 202: while(*v) fputc(*(v++),fp);
+"202
+[e $U 34  ]
+[e :U 35 ]
+[e ( _fputc (2 , *U ++ _v * -> -> 1 `i `x -> -> # *U _v `i `x _fp ]
+[e :U 34 ]
+[e $ != -> *U _v `i -> -> -> 0 `i `uc `i 35  ]
+[e :U 36 ]
+[; ;stdio.c: 203: break;
+"203
+[e $U 30  ]
+[; ;stdio.c: 204: case 'l':
+"204
+[e :U 37 ]
+[; ;stdio.c: 205: p++;
+"205
+[e ++ _p * -> -> 1 `i `x -> -> # *U _p `i `x ]
+[; ;stdio.c: 207: lval=(*(long *)__va_arg((*(long **)ap), (long)0));
+"207
+[e = _lval *U -> ( ___va_arg , (. -> *U -> &U _ap `**l `*v -> -> 0 `i `l `*l ]
+[; ;stdio.c: 208: v=longToStr(lval,str,12);
+"208
+[e = _v ( _longToStr (3 , , _lval &U _str -> -> 12 `i `uc ]
+[; ;stdio.c: 209: while(*v) fputc(*(v++),fp);
+"209
+[e $U 38  ]
+[e :U 39 ]
+[e ( _fputc (2 , *U ++ _v * -> -> 1 `i `x -> -> # *U _v `i `x _fp ]
+[e :U 38 ]
+[e $ != -> *U _v `i -> -> -> 0 `i `uc `i 39  ]
+[e :U 40 ]
+[; ;stdio.c: 210: break;
+"210
+[e $U 30  ]
+[; ;stdio.c: 211: case 'c':
+"211
+[e :U 41 ]
+[; ;stdio.c: 212: ival=(*(int *)__va_arg((*(int **)ap), (int)0));
+"212
+[e = _ival *U -> ( ___va_arg , (. -> *U -> &U _ap `**i `*v -> 0 `i `*i ]
+[; ;stdio.c: 213: (void)fputc((char)ival,fp);
+"213
+[e ( _fputc (2 , -> _ival `uc _fp ]
+[; ;stdio.c: 214: break;
+"214
+[e $U 30  ]
+[; ;stdio.c: 215: case 'u':
+"215
+[e :U 42 ]
+[; ;stdio.c: 216: uval=(*(unsigned int *)__va_arg((*(unsigned int **)ap), (unsigned int)0));
+"216
+[e = _uval *U -> ( ___va_arg , (. -> *U -> &U _ap `**ui `*v -> -> 0 `i `ui `*ui ]
+[; ;stdio.c: 217: v=uToStr(uval,str,12);
+"217
+[e = _v ( _uToStr (3 , , _uval &U _str -> -> 12 `i `uc ]
+[; ;stdio.c: 218: while(*v) fputc(*(v++),fp);
+"218
+[e $U 43  ]
+[e :U 44 ]
+[e ( _fputc (2 , *U ++ _v * -> -> 1 `i `x -> -> # *U _v `i `x _fp ]
+[e :U 43 ]
+[e $ != -> *U _v `i -> -> -> 0 `i `uc `i 44  ]
+[e :U 45 ]
+[; ;stdio.c: 219: break;
+"219
+[e $U 30  ]
+[; ;stdio.c: 220: case 'e':
+"220
+[e :U 46 ]
+[; ;stdio.c: 221: dval=(*(double *)__va_arg((*(double **)ap), (double)0));
+"221
+[e = _dval *U -> ( ___va_arg , (. -> *U -> &U _ap `**d `*v -> -> 0 `i `d `*d ]
+[; ;stdio.c: 223: break;
+"223
+[e $U 30  ]
+[; ;stdio.c: 224: case 'f':
+"224
+[e :U 47 ]
+[; ;stdio.c: 225: dval = (*(double *)__va_arg((*(double **)ap), (double)0));
+"225
+[e = _dval *U -> ( ___va_arg , (. -> *U -> &U _ap `**d `*v -> -> 0 `i `d `*d ]
+[; ;stdio.c: 227: break;
+"227
+[e $U 30  ]
+[; ;stdio.c: 228: case 'g':
+"228
+[e :U 48 ]
+[; ;stdio.c: 229: dval = (*(double *)__va_arg((*(double **)ap), (double)0));
+"229
+[e = _dval *U -> ( ___va_arg , (. -> *U -> &U _ap `**d `*v -> -> 0 `i `d `*d ]
+[; ;stdio.c: 231: break;
+"231
+[e $U 30  ]
+[; ;stdio.c: 232: case 's':
+"232
+[e :U 49 ]
+[; ;stdio.c: 233: for(sval=(*(char * *)__va_arg((*(char * **)ap), (char *)0));*sval;sval++) (void)fputc(*sval,fp);
+"233
+{
+[e = _sval *U -> ( ___va_arg , (. -> *U -> &U _ap `***uc `*v -> -> 0 `i `*uc `**uc ]
+[e $U 53  ]
+[e :U 50 ]
+[e ( _fputc (2 , *U _sval _fp ]
+[e ++ _sval * -> -> 1 `i `x -> -> # *U _sval `i `x ]
+[e :U 53 ]
+[e $ != -> *U _sval `i -> -> -> 0 `i `uc `i 50  ]
+[e :U 51 ]
+}
+[; ;stdio.c: 234: break;
+"234
+[e $U 30  ]
+[; ;stdio.c: 235: default:
+"235
+[e :U 54 ]
+[; ;stdio.c: 236: (void)fputc(*p,fp);
+"236
+[e ( _fputc (2 , *U _p _fp ]
+[; ;stdio.c: 237: break;
+"237
+[e $U 30  ]
+"238
+}
+[; ;stdio.c: 238: }
+[e $U 30  ]
+"196
+[e :U 31 ]
+[e [\ *U =+ _p * -> -> 1 `i `x -> -> # *U _p `i `x , $ -> -> 100 `ui `uc 32
+ , $ -> -> 105 `ui `uc 33
+ , $ -> -> 108 `ui `uc 37
+ , $ -> -> 99 `ui `uc 41
+ , $ -> -> 117 `ui `uc 42
+ , $ -> -> 101 `ui `uc 46
+ , $ -> -> 102 `ui `uc 47
+ , $ -> -> 103 `ui `uc 48
+ , $ -> -> 115 `ui `uc 49
+ 54 ]
+"238
+[e :U 30 ]
+"239
+}
+"189
+[e :U 27 ]
+[e ++ _p * -> -> 1 `i `x -> -> # *U _p `i `x ]
+[e :U 28 ]
+[e $ != -> *U _p `i -> -> -> 0 `i `uc `i 25  ]
+[e :U 26 ]
+"239
+}
+[; ;stdio.c: 239: }
+[; ;stdio.c: 240: ;
+[; ;stdio.c: 241: }
+"241
+[e :UE 24 ]
+}
+"255
+[v _intToStr `(*uc ~T0 1 ef3`i`*uc`uc ]
+{
+[; ;stdio.c: 254: char *intToStr(int num,char *str,char strLen)
+[; ;stdio.c: 255: {
+[e :U _intToStr ]
+[v _num `i ~T0 1 r1 ]
+[v _str `*uc ~T0 1 r2 ]
+[v _strLen `uc ~T0 1 r3 ]
+[f ]
+[; ;stdio.c: 257: str+=strLen-1;
+"257
+[e =+ _str * -> - -> _strLen `i -> 1 `i `x -> -> # *U _str `i `x ]
+[; ;stdio.c: 258: *str=0;
+"258
+[e = *U _str -> -> 0 `i `uc ]
+[; ;stdio.c: 259: if(num<0)
+"259
+[e $ ! < _num -> 0 `i 56  ]
+[; ;stdio.c: 260: {
+"260
+{
+[; ;stdio.c: 261: do *(--str)='0'-(num%10);
+"261
+[e :U 59 ]
+[e = *U =- _str * -> -> 1 `i `x -> -> # *U _str `i `x -> - -> 48 `ui -> % _num -> 10 `i `ui `uc ]
+[; ;stdio.c: 262: while((num/=10)!=0);
+"262
+[e $ != =/ _num -> -> 10 `uc `i -> 0 `i 59  ]
+[e :U 58 ]
+[; ;stdio.c: 263: *(--str)='-';
+"263
+[e = *U =- _str * -> -> 1 `i `x -> -> # *U _str `i `x -> -> 45 `ui `uc ]
+"264
+}
+[; ;stdio.c: 264: }
+[e $U 60  ]
+"265
+[e :U 56 ]
+[; ;stdio.c: 265: else
+[; ;stdio.c: 266: {
+"266
+{
+[; ;stdio.c: 267: do *(--str)='0'+(num%10);
+"267
+[e :U 63 ]
+[e = *U =- _str * -> -> 1 `i `x -> -> # *U _str `i `x -> + -> 48 `ui -> % _num -> 10 `i `ui `uc ]
+[; ;stdio.c: 268: while((num/=10)!=0);
+"268
+[e $ != =/ _num -> -> 10 `uc `i -> 0 `i 63  ]
+[e :U 62 ]
+"269
+}
+[e :U 60 ]
+[; ;stdio.c: 269: }
+[; ;stdio.c: 270: return str;
+"270
+[e ) _str ]
+[e $UE 55  ]
+[; ;stdio.c: 272: }
+"272
+[e :UE 55 ]
+}
+"279
+[v _longToStr `(*uc ~T0 1 ef3`l`*uc`uc ]
+{
+[; ;stdio.c: 278: char *longToStr(long num,char *str,char strLen)
+[; ;stdio.c: 279: {
+[e :U _longToStr ]
+[v _num `l ~T0 1 r1 ]
+[v _str `*uc ~T0 1 r2 ]
+[v _strLen `uc ~T0 1 r3 ]
+[f ]
+[; ;stdio.c: 280: str+=strLen-1;
+"280
+[e =+ _str * -> - -> _strLen `i -> 1 `i `x -> -> # *U _str `i `x ]
+[; ;stdio.c: 281: *str=0;
+"281
+[e = *U _str -> -> 0 `i `uc ]
+[; ;stdio.c: 282: if(num<0)
+"282
+[e $ ! < _num -> -> 0 `i `l 65  ]
+[; ;stdio.c: 283: {
+"283
+{
+[; ;stdio.c: 284: do *(--str)='0'-(num%10);
+"284
+[e :U 68 ]
+[e = *U =- _str * -> -> 1 `i `x -> -> # *U _str `i `x -> - -> -> 48 `ui `l % _num -> -> 10 `i `l `uc ]
+[; ;stdio.c: 285: while((num/=10)!=0);
+"285
+[e $ != =/ _num -> -> 10 `uc `l -> -> 0 `i `l 68  ]
+[e :U 67 ]
+[; ;stdio.c: 286: *(--str)='-';
+"286
+[e = *U =- _str * -> -> 1 `i `x -> -> # *U _str `i `x -> -> 45 `ui `uc ]
+"287
+}
+[; ;stdio.c: 287: }
+[e $U 69  ]
+"288
+[e :U 65 ]
+[; ;stdio.c: 288: else
+[; ;stdio.c: 289: {
+"289
+{
+[; ;stdio.c: 290: do *(--str)='0'+(num%10);
+"290
+[e :U 72 ]
+[e = *U =- _str * -> -> 1 `i `x -> -> # *U _str `i `x -> + -> -> 48 `ui `l % _num -> -> 10 `i `l `uc ]
+[; ;stdio.c: 291: while((num/=10)!=0);
+"291
+[e $ != =/ _num -> -> 10 `uc `l -> -> 0 `i `l 72  ]
+[e :U 71 ]
+"292
+}
+[e :U 69 ]
+[; ;stdio.c: 292: }
+[; ;stdio.c: 293: return str;
+"293
+[e ) _str ]
+[e $UE 64  ]
+[; ;stdio.c: 294: }
+"294
+[e :UE 64 ]
+}
+"308
+[v _ucharToStr `(v ~T0 1 ef3`uc`*uc`uc ]
+{
+[; ;stdio.c: 307: void ucharToStr(unsigned char num,char *str,char strLen)
+[; ;stdio.c: 308: {
+[e :U _ucharToStr ]
+[v _num `uc ~T0 1 r1 ]
+[v _str `*uc ~T0 1 r2 ]
+[v _strLen `uc ~T0 1 r3 ]
+[f ]
+"309
+[v _i `uc ~T0 1 a ]
+[; ;stdio.c: 309: char i;
+[; ;stdio.c: 311: str+=strLen-1;
+"311
+[e =+ _str * -> - -> _strLen `i -> 1 `i `x -> -> # *U _str `i `x ]
+[; ;stdio.c: 312: for(i=0;i<strLen;i++)
+"312
+{
+[e = _i -> -> 0 `i `uc ]
+[e $U 77  ]
+"313
+[e :U 74 ]
+[; ;stdio.c: 313: {
+{
+[; ;stdio.c: 314: *(--str)='0'+(num%10);
+"314
+[e = *U =- _str * -> -> 1 `i `x -> -> # *U _str `i `x -> + -> 48 `ui -> % -> _num `i -> 10 `i `ui `uc ]
+[; ;stdio.c: 315: num/=10;
+"315
+[e =/ _num -> 10 `uc ]
+"316
+}
+"312
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 77 ]
+[e $ < -> _i `i -> _strLen `i 74  ]
+[e :U 75 ]
+"316
+}
+[; ;stdio.c: 316: }
+[; ;stdio.c: 317: }
+"317
+[e :UE 73 ]
+}
+"320
+[v _uToStr `(*uc ~T0 1 ef3`ui`*uc`uc ]
+{
+[; ;stdio.c: 319: char *uToStr(unsigned int num,char *str,char strLen)
+[; ;stdio.c: 320: {
+[e :U _uToStr ]
+[v _num `ui ~T0 1 r1 ]
+[v _str `*uc ~T0 1 r2 ]
+[v _strLen `uc ~T0 1 r3 ]
+[f ]
+[; ;stdio.c: 321: str+=strLen-1;
+"321
+[e =+ _str * -> - -> _strLen `i -> 1 `i `x -> -> # *U _str `i `x ]
+[; ;stdio.c: 322: *str=0;
+"322
+[e = *U _str -> -> 0 `i `uc ]
+[; ;stdio.c: 325: do *(--str)='0'+(num%10);
+"325
+[e :U 81 ]
+[e = *U =- _str * -> -> 1 `i `x -> -> # *U _str `i `x -> + -> 48 `ui % _num -> -> 10 `i `ui `uc ]
+[; ;stdio.c: 326: while((num/=10)!=0);
+"326
+[e $ != =/ _num -> -> 10 `uc `ui -> -> 0 `i `ui 81  ]
+[e :U 80 ]
+[; ;stdio.c: 328: return str;
+"328
+[e ) _str ]
+[e $UE 78  ]
+[; ;stdio.c: 330: }
+"330
+[e :UE 78 ]
+}

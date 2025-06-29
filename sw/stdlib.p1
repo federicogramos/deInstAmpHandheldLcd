@@ -1,0 +1,154 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[; ;stdlib.h: 15: int atoi(char *s);
+[; ;stdlib.h: 16: long int atol(char *s);
+[; ;stdio.h: 23: enum e_mode_fseek{SEEK_END,SEEK_CUR,SEEK_SET};
+[; ;stdio.h: 45: typedef struct
+[; ;stdio.h: 46: {
+[; ;stdio.h: 47: char flg;
+[; ;stdio.h: 48: char *nxr;
+[; ;stdio.h: 49: char *nxw;
+[; ;stdio.h: 50: char *bas;
+[; ;stdio.h: 51: char nr;
+[; ;stdio.h: 52: char nw;
+[; ;stdio.h: 53: char bufsiz;
+[; ;stdio.h: 54: }FILE;
+[; ;stdio.h: 65: char fputc(char c, FILE *stream);
+[; ;stdio.h: 66: char fgetc(FILE *stream);
+[; ;stdio.h: 67: void fseek(FILE *fp,int offset,int mode);
+[; ;stdio.h: 68: void unget(FILE *stream);
+[; ;stdio.h: 73: void fprintf(FILE *fp,char *fmt,...);
+[; ;stdio.h: 74: void fprinti(FILE *fp,char *str);
+[; ;stdio.h: 76: char *intToStr(int num,char *str,char strLen);
+[; ;stdio.h: 77: char *longToStr(long num,char *str,char strLen);
+[; ;stdio.h: 78: void ucharToStr(unsigned char num,char *str,char strLen);
+[; ;stdio.h: 79: char *uToStr(unsigned int num,char *str,char strLen);
+"24 J:\0000 FEDE\16GB\LIB_SW_PIC\lib_sw_pic\stdlib\stdlib.c
+[v _atoi `(i ~T0 1 ef1`*uc ]
+{
+[; ;stdlib.c: 23: int atoi(char *s)
+[; ;stdlib.c: 24: {
+[e :U _atoi ]
+[v _s `*uc ~T0 1 r1 ]
+[f ]
+"25
+[v _res `i ~T0 1 a ]
+[; ;stdlib.c: 25: int res=0;
+[e = _res -> 0 `i ]
+"26
+[v _sign `uc ~T0 1 a ]
+[; ;stdlib.c: 26: char sign=1;
+[e = _sign -> -> 1 `i `uc ]
+"27
+[v _i `uc ~T0 1 a ]
+[; ;stdlib.c: 27: char i=0;
+[e = _i -> -> 0 `i `uc ]
+[; ;stdlib.c: 29: if(s[0]=='-')
+"29
+[e $ ! == -> *U + _s * -> -> 0 `i `x -> -> # *U _s `i `x `ui -> 45 `ui 3  ]
+[; ;stdlib.c: 30: {
+"30
+{
+[; ;stdlib.c: 31: sign = -1;
+"31
+[e = _sign -> -U -> 1 `i `uc ]
+[; ;stdlib.c: 32: i++;
+"32
+[e ++ _i -> -> 1 `i `uc ]
+"33
+}
+[e :U 3 ]
+[; ;stdlib.c: 33: }
+[; ;stdlib.c: 34: for(;s[i]!=0;++i)
+"34
+{
+[e $U 7  ]
+"35
+[e :U 4 ]
+[; ;stdlib.c: 35: {
+{
+[; ;stdlib.c: 36: res=(res*10)+(s[i]-'0');
+"36
+[e = _res -> + -> * _res -> 10 `i `ui - -> *U + _s * -> _i `ux -> -> # *U _s `ui `ux `ui -> 48 `ui `i ]
+"37
+}
+"34
+[e =+ _i -> -> 1 `i `uc ]
+[e :U 7 ]
+[e $ != -> *U + _s * -> _i `ux -> -> # *U _s `ui `ux `i -> 0 `i 4  ]
+[e :U 5 ]
+"37
+}
+[; ;stdlib.c: 37: }
+[; ;stdlib.c: 38: return sign*res;
+"38
+[e ) * -> _sign `i _res ]
+[e $UE 2  ]
+[; ;stdlib.c: 39: }
+"39
+[e :UE 2 ]
+}
+"44
+[v _atol `(l ~T0 1 ef1`*uc ]
+{
+[; ;stdlib.c: 43: long int atol(char *s)
+[; ;stdlib.c: 44: {
+[e :U _atol ]
+[v _s `*uc ~T0 1 r1 ]
+[f ]
+"45
+[v _res `l ~T0 1 a ]
+[; ;stdlib.c: 45: long int res=0;
+[e = _res -> -> 0 `i `l ]
+"46
+[v _sign `uc ~T0 1 a ]
+[; ;stdlib.c: 46: char sign=1;
+[e = _sign -> -> 1 `i `uc ]
+"47
+[v _i `uc ~T0 1 a ]
+[; ;stdlib.c: 47: char i=0;
+[e = _i -> -> 0 `i `uc ]
+[; ;stdlib.c: 49: if(s[0]=='-')
+"49
+[e $ ! == -> *U + _s * -> -> 0 `i `x -> -> # *U _s `i `x `ui -> 45 `ui 9  ]
+[; ;stdlib.c: 50: {
+"50
+{
+[; ;stdlib.c: 51: sign = -1;
+"51
+[e = _sign -> -U -> 1 `i `uc ]
+[; ;stdlib.c: 52: i++;
+"52
+[e ++ _i -> -> 1 `i `uc ]
+"53
+}
+[e :U 9 ]
+[; ;stdlib.c: 53: }
+[; ;stdlib.c: 54: for(;s[i]!=0;++i)
+"54
+{
+[e $U 13  ]
+"55
+[e :U 10 ]
+[; ;stdlib.c: 55: {
+{
+[; ;stdlib.c: 56: res=(res*10)+(s[i]-'0');
+"56
+[e = _res + * _res -> -> 10 `i `l -> - -> *U + _s * -> _i `ux -> -> # *U _s `ui `ux `ui -> 48 `ui `l ]
+"57
+}
+"54
+[e =+ _i -> -> 1 `i `uc ]
+[e :U 13 ]
+[e $ != -> *U + _s * -> _i `ux -> -> # *U _s `ui `ux `i -> 0 `i 10  ]
+[e :U 11 ]
+"57
+}
+[; ;stdlib.c: 57: }
+[; ;stdlib.c: 58: return sign*res;
+"58
+[e ) * -> _sign `l _res ]
+[e $UE 8  ]
+[; ;stdlib.c: 59: }
+"59
+[e :UE 8 ]
+}
