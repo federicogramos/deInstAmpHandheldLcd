@@ -8,4 +8,5 @@ Contiene el firmware.
 Diseño en Altium.
 ![alt text](https://raw.githubusercontent.com/federicogramos/deInstAmpHandheldLcd/main/otherFiles/cad.jpg)
 
-
+Prototipo
+![alt text](https://raw.githubusercontent.com/federicogramos/deInstAmpHandheldLcd/main/otherFiles/prototipo.jpg)
