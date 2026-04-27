@@ -110,10 +110,6 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 
-[GeneratedDocument1]
-DocumentPath=Project Outputs for handheld_main\Design Rule Check - handheld_main.html
-DItemRevisionGUID=
-
 [PCBConfiguration1]
 ReleaseItemId=
 CurrentRevision=
